@@ -1,0 +1,81 @@
+.titulo {
+    font-family: "Space Grotesk", sans-serif; 
+    color: #272727; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.slogan {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: "Urbanist", sans-serif;
+    color: #272727;
+}
+.texto-institucional{
+    font-size: 1.5rem;
+    font-family: "Space Grotesk", sans-serif;
+    color: #272727;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 1.5px;
+    margin-top: 3rem;
+}
+
+.uk-card-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 3.5rem;
+    font-family: "Space Grotesk";
+    text-align: left;
+    color: #f5f5dc;
+    margin-top: 5px;
+}
+.uk-card {
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+}
+.uk-card-default{
+    background-color: #fa8072;
+}
+
+.card-content{
+    font-size: 1rem;
+    font-family: "Space Grotesk";
+    color: #f5f5dc;
+}
+
+.uk-accordion-title{
+    font-size: 1rem;
+    font-family: "Space Grotesk";
+    color: #f5f5dc;
+    font-weight: 500;
+}
+
+.uk-list {
+    font-size: 1rem;
+    font-family: "Space Grotesk";
+    color: #f5f5dc;
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;       /* tamanho do círculo */
+    height: 5rem;      /* mesmo que width para ser perfeito */
+    background-color: #f5f5dc;
+    color: #fa8072;
+    border-radius: 50%;
+    font-size: 2.5rem; /* tamanho do ícone */
+}
+
+.uk-accordion-icon{
+    color: #f5f5dc !important;
+}
+
+.uk-accordion-title:hover{
+    color: #dbdbdb;
+}

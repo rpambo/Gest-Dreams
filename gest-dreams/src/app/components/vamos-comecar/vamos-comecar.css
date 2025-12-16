@@ -1,0 +1,26 @@
+.back {
+    background-image: url("/imagens/upload/bg/vamos-comecar.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.uk-text-title{
+    font-size: 8.9rem;
+    color: white;
+    font-family: 'Urbanist';
+    font-weight: bold;
+}
+
+.text-desc{
+    color: #f5f5dc;
+    font-weight: 500;
+    font-family: "Space Grotesk";
+    font-size: 1.2rem;
+}
+
+hr{
+    border: 1px #86867aa8 solid;
+    height: .5px;
+}

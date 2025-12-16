@@ -1,0 +1,21 @@
+a{
+    font-family: 'Urbanist';
+    font-weight: 700;
+    color: #f5f5dc;
+}
+
+ul li a{
+    font-family: 'Urbanist';
+    font-weight: 700;
+    color: #f5f5dc;
+}
+
+ul li a:hover{
+    color: #f5f5dc;
+}
+
+.uk-button:hover{
+    border: 1px solid #dbdbdb !important;
+    color: #8e459b;
+    background-color: #fff;
+}
