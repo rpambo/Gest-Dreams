@@ -1,9 +1,18 @@
-<div class="uk-navbar-container uk-position-fixed" style="background-color: #8e459b; z-index: 99999; right: 0; left: 0; top: 0;">
+<div  class="uk-navbar-container uk-position-fixed uk-position-top"
+  [class.navbar-scrolled]="showWhiteNavbar"
+  [class.navbar-hidden]="hideNavbar"
+  style="z-index: 1000;">
     <div class="uk-container">
         <div uk-navbar>
             <div class="uk-navbar-left">
                 <div class="uk-navbar-item">
-                    <a class="uk-logo"  href="#" aria-label="Back to Home"><img width="160"  src="imagens/upload/logo/logo-gestdremas.svg" alt=""></a>
+                    <a class="uk-logo"  href="#" aria-label="Back to Home">
+                        <img 
+                            [src]="showWhiteNavbar ? 'imagens/upload/logo/logo-gestdremas-original.svg' : 'imagens/upload/logo/logo-gestdremas.svg'" 
+                            width="160" 
+                            alt="GestDreams Logo"
+                        >
+                    </a>
                 </div>
             </div>
             <div class="uk-navbar-center">

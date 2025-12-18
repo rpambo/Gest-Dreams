@@ -7,7 +7,11 @@
 }
 
 .uk-overlay-default{
-    background-color: #00000056;
+    background-color: #00000037;
+}
+
+.uk-slideshow-items img{
+  height: 100%;
 }
 
 .uk-text-lead{

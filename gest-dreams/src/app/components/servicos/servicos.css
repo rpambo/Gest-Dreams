@@ -35,3 +35,26 @@
 .uk-card-default{
     background-color: #f5f5dc;
 }
+
+.uk-dotnav > li > a {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fa8072;
+  border-radius: 20px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.uk-dotnav > .uk-active > a {
+  width: 40px; /* ou 50px se quiseres mais impacto */
+  background: #fa8072;
+  border: none;
+}
+
+
+.slider-counter {
+    color: #fa8072;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Urbanist";
+}

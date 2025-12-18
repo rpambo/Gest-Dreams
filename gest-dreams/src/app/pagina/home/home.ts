@@ -5,10 +5,11 @@ import { QuemSomos } from "../../components/quem-somos/quem-somos";
 import { Impacto } from "../../components/impacto/impacto";
 import { Servicos } from "../../components/servicos/servicos";
 import { VamosComecar } from "../../components/vamos-comecar/vamos-comecar";
+import { Inovacao } from "../../components/inovacao/inovacao";
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar, Slides, QuemSomos, Impacto, Servicos, VamosComecar],
+  imports: [Navbar, Slides, QuemSomos, Impacto, Servicos, VamosComecar, Inovacao],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

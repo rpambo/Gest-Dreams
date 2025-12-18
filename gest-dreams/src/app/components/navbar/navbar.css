@@ -19,3 +19,30 @@ ul li a:hover{
     color: #8e459b;
     background-color: #fff;
 }
+
+.uk-navbar-container {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.05); /* transparente inicial */
+}
+
+.navbar-scrolled {
+  background-color: #f5f5dc;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.uk-navbar-nav > li > a {
+  transition: color 0.3s ease;
+}
+
+.navbar-scrolled .uk-navbar-nav > li > a {
+  color: #272727;
+}
+
+.navbar-scrolled .uk-button {
+  color: #272727;
+  border: 1px solid #272727 !important;
+}
