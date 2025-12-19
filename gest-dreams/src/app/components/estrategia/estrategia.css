@@ -9,3 +9,15 @@
     font-family: "Roboto";
     font-size: 1rem;
 }
+
+.reveal-fade {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1.5s cubic-bezier(.4,0,.2,1),
+              transform 1.5s cubic-bezier(.4,0,.2,1);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -5,6 +5,18 @@
     font-weight: 700;
 }
 
+.text-servico.reveal-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.text-servico {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .titulo {
     font-family: "Space Grotesk", sans-serif; 
     color: #272727; 
@@ -57,4 +69,49 @@
     font-size: 1.5rem;
     font-weight: 500;
     font-family: "Urbanist";
+}
+
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s cubic-bezier(.4,0,.2,1),
+              transform 1.5s cubic-bezier(.4,0,.2,1);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-parallax {
+  perspective: 1000px; /* ajuda no efeito de profundidade */
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+/* Texto flutuante que segue o mouse */
+.hover-text {
+  position: fixed; /* segue o cursor */
+  pointer-events: none;
+  background: rgba(39, 39, 39, 0.8);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }

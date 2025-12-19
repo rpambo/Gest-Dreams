@@ -1,11 +1,19 @@
 <div id="inovacao" class="uk-section uk-section-large" style="background-color: #f5f5dc;">
     <div class="uk-container">
-        <div class="uk-child-width-1-2@l uk-grid">
+        <div class="uk-child-width-1-2@l uk-grid" uk-grid uk-height-match="target: > div > div">
             <div>
                 <div class="uk-card uk-card-body uk-card-default" style="border-radius: 10px;">
-                    <h2 class="uk-card-title">Como fazemos</h2>
-                    <p class="desc-inovacao">A GestDreams é uma empresa especializada em saúde emocional e produtividade no trabalho, com profissionais experientes para oferecer programas e consultoria estratégica a empresas e equipas. Nosso foco é transformar ambientes de trabalho, fortalecendo a saúde mental, aumentando a motivação e potencializando resultados de forma sustentável.</p>
-                    <div class="uk-child-width-1-2@l uk-grid uk-grid-match">
+                    <h2 class="uk-card-title reveal-fade" uk-scrollspy="cls: reveal-active-1; delay: 200">Como fazemos</h2>
+                    <p class="desc-inovacao reveal-lines" uk-scrollspy="cls: reveal-active; delay: 200">
+                        <span>A GestDreams é uma empresa especializada em saúde emocional</span>
+                        <span>e produtividade no trabalho, com profissionais experientes para </span>
+                        <span>oferecer programas e consultoria estratégica a empresas</span>
+                        <span>e equipas. Nosso foco é transformar ambientes de trabalho,</span>
+                        <span>fortalecendo a saúde mental, aumentando a motivação</span>
+                        <span>e potencializando resultados de forma sustentável.</span>
+                    </p>
+
+                        <div class="uk-child-width-1-2@l uk-grid uk-grid-match">
                         <div>
                             <p class="parceria">Nossa parceria começa com uma análise detalhada da sua organização. Avaliamos o ambiente de trabalho, identificamos desafios e oportunidades relacionados à saúde emocional e produtividade, e sugerimos programas e estratégias sob medida. Esse é o primeiro passo para transformar sua equipa e potencializar resultados de forma sustentável.</p>
                         </div>
@@ -18,7 +26,13 @@
                 </div>
             </div>
             <div>
-
+                <div class="uk-background-cover  uk-border-rounded uk-height-1-1 uk-position-relative" uk-img data-src="imagens/upload/bg/inovacao-bg.png">
+                    <div class="uk-position-cover uk-overlay uk-overlay-default">
+                        <div class="uk-position-center-left">
+                            <img  src="imagens/upload/logo/gestdream-vertical.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

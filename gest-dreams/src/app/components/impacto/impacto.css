@@ -9,13 +9,43 @@
 
 .frase-impacto {
     font-family: 'Urbanist', sans-serif; /* fonte moderna e limpa */
-    font-size: 2.85rem;                     /* tamanho grande para destaque */
+    font-size: 2.8rem;                     /* tamanho grande para destaque */
     font-weight: 700;                     /* negrito para impacto */
     line-height: 1.2;                     /* espaçamento entre linhas */
     color: #272727;                       /* cor escura, legível */
     text-align: right;                   /* centralizado */
     margin: 1.5rem 0;
-                        /* espaçamento vertical */
+}
+
+.frase-impacto.reveal-lines span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal-active.frase-impacto span {
+  animation: impactLineUp 1.8s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes impactLineUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-active.frase-impacto span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.reveal-active.frase-impacto span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.reveal-active.frase-impacto span:nth-child(3) {
+  animation-delay: 1.4s;
 }
 
 .descricao-impacto {

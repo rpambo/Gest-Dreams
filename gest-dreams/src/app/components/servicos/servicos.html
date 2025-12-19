@@ -5,20 +5,29 @@
         <h3 class="titulo">Programas</h3>
       </div>
       <div class="uk-width-expand">
-        <p class="text-servico">Programas estratégicos para promover bem-estar, foco e produtividade.</p>
+        <p class="text-servico reveal-fade" uk-scrollspy="cls: reveal-active; delay: 300">
+          Programas estratégicos para promover bem-estar, foco e produtividade.
+        </p>
       </div>
+
     </div>
 
     <div uk-slider>
       <div class="uk-position-relative">
         <div class="uk-slider-container">
           <div class="uk-slider-items uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
-            <div *ngFor="let programa of programas">
-              <div class="uk-card uk-card-boady">
-                <div class="uk-card-media-top">
-                  <img [src]="programa.imagem" style="border-radius: 10px;" alt="">
+            <div *ngFor="let programa of programas; let i = index">
+
+              <div class="uk-card" style="border-radius: 10px;">
+                <div class="uk-card-media-top reveal-fade parallax-img" style="border-radius: 10px;" uk-scrollspy="cls: reveal-active; delay: 200"
+                (mousemove)="onMouseMove($event, i)" (mouseleave)="onMouseLeave(i)"
+                >
+                  <a href=""><img [src]="programa.imagem" style="border-radius: 10px;" alt=""></a>
+                  <!-- Texto flutuante com CTA -->
+                  <!-- Hover text individual -->
+                   <span class="hover-text" [ngStyle]="hoverStyles[i]">{{ programa.cta }}</span>
                 </div>
-                <div class="uk-padding-small">
+                <div class="uk-padding-small reveal-fade" uk-scrollspy="cls: reveal-active; delay: 400">
                   <h3 class="uk-card-title">{{ programa.titulo }}</h3>
 
                   <p *ngFor="let desc of programa.descricao" class="desc-service">{{ desc }}</p>

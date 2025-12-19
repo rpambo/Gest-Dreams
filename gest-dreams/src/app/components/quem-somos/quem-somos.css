@@ -7,7 +7,7 @@
 }
 
 .slogan {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
     font-family: "Urbanist", sans-serif;
     color: #272727;
@@ -20,7 +20,7 @@
     text-align: left;
     line-height: 1.6;
     text-align: left;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5;
     margin-top: 3rem;
 }
 
@@ -78,4 +78,70 @@
 
 .uk-accordion-title:hover{
     color: #dbdbdb;
+}
+
+.reveal-lines span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.reveal-lines span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.reveal-active span {
+  animation: lineFadeUp 0.6s ease forwards;
+}
+
+.reveal-active span::after {
+  animation: maskUp 0.6s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+
+.reveal-active span:nth-child(1) {
+  animation-delay: 0s;
+}
+.reveal-active span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.reveal-active span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.reveal-active span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.reveal-active span:nth-child(1)::after {
+  animation-delay: 0s;
+}
+.reveal-active span:nth-child(2)::after {
+  animation-delay: 0.15s;
+}
+.reveal-active span:nth-child(3)::after {
+  animation-delay: 0.3s;
+}
+.reveal-active span:nth-child(4)::after {
+  animation-delay: 0.45s;
+}
+
+@keyframes lineFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes maskUp {
+  to {
+    transform: translateY(-101%);
+  }
 }
