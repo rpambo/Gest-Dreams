@@ -1,0 +1,18 @@
+.text-footer{
+    font-size: .87rem;
+    font-weight: 400;
+    font-family: "Roboto";
+    color: #272727be;
+}
+
+ul li a{
+    color: #272727;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Urbanist";
+}
+.alinhar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

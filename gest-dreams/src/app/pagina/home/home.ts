@@ -7,10 +7,12 @@ import { Servicos } from "../../components/servicos/servicos";
 import { VamosComecar } from "../../components/vamos-comecar/vamos-comecar";
 import { Inovacao } from "../../components/inovacao/inovacao";
 import { Founder } from "../../components/founder/founder";
+import { Contacto } from "../../components/contacto/contacto";
+import { Footer } from "../../components/footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar, Slides, QuemSomos, Impacto, Servicos, VamosComecar, Inovacao, Founder],
+  imports: [Navbar, Slides, QuemSomos, Impacto, Servicos, VamosComecar, Inovacao, Founder, Contacto, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

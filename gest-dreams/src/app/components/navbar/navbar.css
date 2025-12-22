@@ -11,7 +11,7 @@ ul li a{
 }
 
 ul li a:hover{
-    color: #f5f5dc;
+    color: #fa8072;
 }
 
 .uk-button:hover{
@@ -40,6 +40,15 @@ ul li a:hover{
 
 .navbar-scrolled .uk-navbar-nav > li > a {
   color: #272727;
+}
+
+.navbar-scrolled .uk-navbar-nav > li > a:hover {
+  color: #8e459b;
+}
+
+.navbar-scrolled  .uk-button:hover {
+  color: #f5f5dc !important;
+  background-color: #8e459b;
 }
 
 .navbar-scrolled .uk-button {

@@ -7,10 +7,10 @@
 }
 
 .text-desc {
-    font-size: 2.5rem;
+    font-size: 3.3rem;
     font-family: "Urbanist";
     color: #f5f5dc;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .bernardino{
@@ -18,4 +18,16 @@
     font-weight: bold;
     color: #272727;
     font-family: "Urbanist";
+}
+
+.uk-icon-button:hover{
+    background-color: transparent !important;
+    border: 2px solid #fa8072;
+    color: #fa8072 !important;
+}
+
+.text-sobre{
+    font-size: .88rem;
+    font-family: "Roboto", sans-serif;
+    color: #272727a8;
 }
