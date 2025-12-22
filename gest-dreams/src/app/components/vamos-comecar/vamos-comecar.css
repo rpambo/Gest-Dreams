@@ -32,6 +32,7 @@ hr{
     font-family: "Space Grotesk";
     font-size: 1rem;
     text-transform: lowercase;
+    padding: 5px 25px;
 }
 
 .uk-button::first-letter{

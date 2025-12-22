@@ -16,3 +16,13 @@ ul li a{
     align-items: center;
     gap: 8px;
 }
+
+hr{
+    border: 1px solid #82828228;
+}
+
+.uk-icon-button:hover{
+    background-color: transparent !important;
+    border: 2px solid #8e459b;
+    color: #8e459b !important;
+}

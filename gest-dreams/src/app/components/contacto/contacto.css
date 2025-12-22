@@ -70,3 +70,15 @@
 hr{
     border: 1px solid  #00000030;
 }
+
+.uk-icon-button:hover{
+    background-color: transparent !important;
+    border: 2px solid #fa8072;
+    color: #fa8072 !important;
+}
+
+.uk-button:hover{
+  background-color: transparent;
+  border: 1px solid #008080;
+  color: #008080;
+}

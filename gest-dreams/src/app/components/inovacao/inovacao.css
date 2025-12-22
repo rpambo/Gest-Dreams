@@ -30,6 +30,7 @@
     font-family: "Space Grotesk";
     font-size: 1rem;
     text-transform: lowercase;
+    padding: 5px 25px;
 }
 
 .uk-button::first-letter{
@@ -128,6 +129,11 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+hr{
+    border: 1px solid #82828228;
+}
+
 
 @keyframes lineFadeUp {
   to {

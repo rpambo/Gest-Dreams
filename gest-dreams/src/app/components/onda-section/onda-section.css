@@ -6,6 +6,13 @@
     font-family: "Space Grotesk", sans-serif;
     font-size: 1rem;
     color: #fa8072;
+    padding: 5px 25px;
+}
+
+.uk-button:hover{
+    background-color: transparent;
+    color: #f5f5dc;
+    border: 1px solid #fff;
 }
 
 .uk-button::first-letter{
