@@ -1,0 +1,122 @@
+.uk-card-title{
+    font-size: 2.5rem;
+    font-family: "Urbanist";
+    color: #f5f5dc;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titulo{
+    color: #f5f5dc;
+    margin: 0;
+    font-family: "Urbanist";
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.text-desc{
+    font-size: .88rem;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+/* Container principal para as seções numeradas */
+.numbered-sections-vertical {
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Cada item numerado */
+.numbered-item-vertical {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.numbered-item-vertical:last-child {
+    margin-bottom: 0;
+}
+
+/* Container do número */
+.number-container-vertical {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Estilo do número */
+.section-number-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #008080;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 2;
+}
+
+/* Linha vertical conectando os números */
+.vertical-connector {
+    position: absolute;
+    top: 40px; /* Começa após o número */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: #008080;
+    height: calc(100% + 40px); /* Altura total do item + margem */
+    z-index: 1;
+}
+
+/* Ajuste para o último item - linha termina no número */
+.numbered-item-vertical:last-child .vertical-connector {
+    height: 0; /* Remove completamente a linha do último item */
+}
+
+/* Conteúdo ao lado dos números */
+.content-vertical {
+    flex: 1;
+    padding-top: 8px; /* Alinha com o centro do número */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-number-vertical {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .number-container-vertical {
+        margin-right: 15px;
+    }
+    
+    .numbered-item-vertical {
+        margin-bottom: 30px;
+    }
+    
+    .vertical-connector {
+        top: 32px;
+        height: calc(100% + 30px);
+    }
+    
+    .content-vertical {
+        padding-top: 4px;
+    }
+    
+    .numbered-item-vertical:last-child .vertical-connector {
+        height: 0;
+    }
+}
+
+/* Versão alternativa - linha vai até o final do conteúdo */
+.numbered-item-vertical:last-child .vertical-connector {
+    height: 70%; /* Vai até o final do conteúdo */
+}

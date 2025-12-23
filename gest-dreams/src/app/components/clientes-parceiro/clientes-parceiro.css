@@ -1,0 +1,10 @@
+.uk-grid > div{
+    margin-top: 20px;
+}
+.title{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    color: #272727;
+    text-transform: uppercase;
+    font-weight: 500;
+}

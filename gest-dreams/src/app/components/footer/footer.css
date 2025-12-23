@@ -2,13 +2,13 @@
     font-size: .87rem;
     font-weight: 400;
     font-family: "Roboto";
-    color: #272727be;
+    color: #f5f5dc;
 }
 
 ul li a{
-    color: #272727;
-    font-weight: bold;
-    font-size: 2rem;
+    color: #f5f5dc;
+    font-weight: 500;
+    font-size: 1rem;
     font-family: "Urbanist";
 }
 .alinhar{
@@ -18,7 +18,7 @@ ul li a{
 }
 
 hr{
-    border: 1px solid #82828228;
+    border: 1px solid #ffffff28;
 }
 
 .uk-icon-button:hover{
