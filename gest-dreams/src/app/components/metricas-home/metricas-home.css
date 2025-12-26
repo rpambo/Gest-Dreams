@@ -1,0 +1,62 @@
+.back{
+  background-image: url(/imagens/upload/bg/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Degradê nos números */
+.gradient-number {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00aaff, #0d5a90);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.gradient-number.big {
+    font-size: 120px;
+    line-height: 1;
+}
+
+.metric.destaque {
+  border-top: 1px solid transparent; /* precisa ser transparente */
+  border-image: radial-gradient(circle 120px at center, #cbe7fa, #00385b) 1;
+  border-image-slice: 1;
+  margin-bottom: 60px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+/* Efeito no divider animado */
+@keyframes grow {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+.titulo-principal {
+  font-size: 16px;
+  color: white !important;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-principal .linha {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #00aaff, #0d5a90);
+  display: block;
+  animation: grow 2s infinite alternate;
+}
+
+.titulo-metricas{
+  max-width: 550px;
+}

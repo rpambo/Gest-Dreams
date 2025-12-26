@@ -1,28 +1,29 @@
-.text-footer{
-    font-size: .87rem;
-    font-weight: 400;
-    font-family: "Roboto";
-    color: #f5f5dc;
+.text{
+    color: rgba(255, 255, 255, 0.753);
+    font-family: "Urbanist";
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+h3{
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Urbanist";
+    font-weight: bold;
 }
 
 ul li a{
-    color: #f5f5dc;
-    font-weight: 500;
+    color: white;
     font-size: 1rem;
-    font-family: "Urbanist";
+    font-family: "Space Grotesk", sans-serif;
 }
-.alinhar{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+
+.text-cpy{
+    color: white;
+    font-size: .79rem;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 hr{
-    border: 1px solid #ffffff28;
-}
-
-.uk-icon-button:hover{
-    background-color: transparent !important;
-    border: 2px solid #8e459b;
-    color: #8e459b !important;
+    border:  1px solid #ffffff45;
 }

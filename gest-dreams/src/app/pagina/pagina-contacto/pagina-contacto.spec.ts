@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OndaSection } from './onda-section';
+import { PaginaContacto } from './pagina-contacto';
 
-describe('OndaSection', () => {
-  let component: OndaSection;
-  let fixture: ComponentFixture<OndaSection>;
+describe('PaginaContacto', () => {
+  let component: PaginaContacto;
+  let fixture: ComponentFixture<PaginaContacto>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OndaSection]
+      imports: [PaginaContacto]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OndaSection);
+    fixture = TestBed.createComponent(PaginaContacto);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

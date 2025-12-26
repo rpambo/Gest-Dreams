@@ -1,51 +1,16 @@
-.text-space {
-    font-family: "Urbanist", sans-serif;
-    font-size: 3rem;
-    max-width: 600px;
-    color: #f5f5dc;
-    font-weight: bold;
-}
-
 .uk-overlay-default{
-    background-color: #00000071;
+    background-color: #00000055;
+}
+.titulo{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Urbanist";
 }
 
-.uk-slideshow-items img{
-  height: 100%;
-}
-
-.uk-text-lead{
-    color: #f5f5dc;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-.uk-button{
-    background-color: #fa8072;
-    color: #fff;
-    border-radius: 10px;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 1rem;
-    padding: 4px 25px;
-    font-weight: 600;
-    border: none;
-}
-
-.uk-dotnav > li > a {
-  width: 10px;
-  height: 10px;
-  border: 1px solid #fa8072;
-  border-radius: 20px;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-.uk-dotnav > .uk-active > a {
-  width: 40px; /* ou 50px se quiseres mais impacto */
-  background: #fa8072;
-  border: none;
-}
-
-.uk-button:hover{
-  background-color: #f5f5dc;
-  color: #fa8072;
+.desc{
+  font-size: 1.1rem;
+  font-family: 500;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
 }

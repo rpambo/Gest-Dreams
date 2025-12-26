@@ -10,6 +10,28 @@ ul li a{
     color: #f5f5dc;
 }
 
+/* estado normal */
+.uk-navbar-dropdown .uk-navbar-dropdown-nav li > a.dropdown-link {
+  font-size: 18px;
+  color: #272727 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.uk-drop-grid {
+  position: relative; /* precisa para o pseudo-elemento */
+}
+
+.uk-drop-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%; /* meio exato */
+  width: 1px;
+  background: #dcdcdc; /* cor da linha */
+}
+
 ul li a:hover{
     color: #fa8072;
 }
