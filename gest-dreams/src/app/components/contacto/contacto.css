@@ -6,6 +6,12 @@
     text-transform: uppercase;
 }
 
+.text-resid{
+  font-family: "Space Grotesk", sans-serif; 
+    color: #272727; 
+    font-size: 1rem; 
+}
+
 .text{
     font-size: 2.5rem;
     font-family: "Urbanist";

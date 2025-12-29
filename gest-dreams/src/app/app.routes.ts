@@ -10,5 +10,5 @@ export const routes: Routes = [
     {path:'sobre-gestdreams', component: Sobre},
     {path:'contacto', component: PaginaContacto},
     {path:'programas', component: Programa},
-    {path:'formulario', component: Transforme}
+    {path:'perfil-empresa', component: Transforme}
 ];

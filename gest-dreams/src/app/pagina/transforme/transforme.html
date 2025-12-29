@@ -1,171 +1,394 @@
-<div class="uk-height-viewport" style="background-color:#272727; overflow:hidden;">
+<div style="background:#000; overflow:hidden;" class="uk-flex uk-flex-center">
 
-  <!-- Tela Inicial -->
-  <div *ngIf="!mostrarFormulario" class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-animation-fade">
-    <div class="uk-container uk-text-center">
-      <img src="imagens/upload/logo/logo-gestdreams.svg" alt="Gestdreams" style="margin-bottom:20px;">
-      <p class="text" style="color:#fff;">
-        Transformamos o ambiente de trabalho em <br>
-        bem-estar com resultados.
-      </p>
-      <a class="uk-button uk-button-default" (click)="iniciarFormulario()">
-        <span uk-icon="icon: chevron-right"></span>
-        Iniciar
-      </a>
+  <div style="width:90%;">
+    <div class="uk-child-width-1-1@l uk-grid">
+
+      <div>
+        <form [formGroup]="formulario"
+            (submit)="submit()"  
+            class="slider-form"
+
+              [class.saindo-cima]="passoAnterior === 3 && passoAtual > passoAnterior"
+              [class.saindo-baixo]="passoAnterior === 3 && passoAtual < passoAnterior">
+
+          <!-- PASSO 0 -->
+          <div class="slide uk-position-top-left"
+               style="top:45%;"
+               [class.ativo]="passoAtual === 0">
+
+            <label style="color:#fff;">
+              Precisamos de algumas informações para começar. Qual é o seu nome completo?
+              <span style="color:#ff3860;">*</span>
+            </label>
+
+            <input class="uk-input" 
+                   formControlName="name" 
+                   type="text" 
+                   required
+                   placeholder="exemplo: Rafael Pambo" 
+                   [ngStyle]="{'border': formulario.get('name')?.invalid && (formulario.get('name')?.dirty || formulario.get('name')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+
+            <button type="button"
+                    class="uk-button uk-button-default"
+                    (click)="proximoPasso()"
+                    [disabled]="formulario.get('name')?.invalid">
+              <span uk-icon="icon: arrow-down"></span> Continuar
+            </button>
+          </div>
+
+          <!-- PASSO 1 -->
+          <div class="slide uk-position-top"
+               style="top:45%;"
+               [class.ativo]="passoAtual === 1">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200; repeat: true" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Por favor, deixe um e-mail para que possamos entrar em contato
+              <span style="color:#ff3860;">*</span>
+            </label>
+
+            <input class="uk-input" 
+                   formControlName="email" 
+                   type="email" 
+                   required
+                   placeholder="exemplo: exemplo@empresa.com"
+                   [ngStyle]="{'border': formulario.get('email')?.invalid && (formulario.get('email')?.dirty || formulario.get('email')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+
+            <button type="button"
+                    class="uk-button uk-button-default"
+                    (click)="proximoPasso()"
+                    [disabled]="formulario.get('email')?.invalid">
+              <span uk-icon="icon: arrow-down"></span> Continuar
+            </button>
+          </div>
+
+          <!-- PASSO 2 -->
+          <div class="slide uk-position-top"
+               style="top:45%;"
+               [class.ativo]="passoAtual === 2">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              E também um número de telefone <span style="color:#ff3860;">*</span>
+            </label>
+
+            <input class="uk-input" 
+                   formControlName="telefone" 
+                   type="tel" 
+                   required
+                   placeholder="exemplo: (+244) 9222 222 222"
+                   [ngStyle]="{'border': formulario.get('telefone')?.invalid && (formulario.get('telefone')?.dirty || formulario.get('telefone')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+
+            <button type="button"
+                    class="uk-button uk-button-default"
+                    (click)="proximoPasso()"
+                    [disabled]="formulario.get('telefone')?.invalid">
+              <span uk-icon="icon: arrow-down"></span> Continuar
+            </button>
+          </div>
+
+          <!-- PASSO 3 -->
+          <div class="slide uk-position-top"
+               style="top:45%;"
+               [class.ativo]="passoAtual === 3">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Qual empresa você representa? <span style="color:#ff3860;">*</span>
+            </label>
+
+            <input class="uk-input" 
+                   formControlName="empresa" 
+                   type="text" 
+                   required
+                   placeholder="exemplo: GestDreams"
+                   [ngStyle]="{'border': formulario.get('empresa')?.invalid && (formulario.get('empresa')?.dirty || formulario.get('empresa')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+
+            <button type="button"
+                    class="uk-button uk-button-default"
+                    (click)="proximoPasso()"
+                    [disabled]="formulario.get('empresa')?.invalid">
+              <span uk-icon="icon: arrow-down"></span> Continuar
+            </button>
+          </div>
+
+          <!-- PASSO 4 -->
+          <div class="slide uk-position-top"
+               style="top:45%;"
+               [class.ativo]="passoAtual === 4">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Em que cidade ela se localiza? <span style="color:#ff3860;">*</span>
+            </label>
+
+            <input class="uk-input" 
+                   formControlName="cidade" 
+                   type="text"
+                   placeholder="exemplo: Angola/Luanda" 
+                   required
+                   [ngStyle]="{'border': formulario.get('cidade')?.invalid && (formulario.get('cidade')?.dirty || formulario.get('cidade')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+
+            <button type="button"
+                    class="uk-button uk-button-default"
+                    (click)="proximoPasso()"
+                    [disabled]="formulario.get('cidade')?.invalid">
+              <span uk-icon="icon: arrow-down"></span> Continuar
+            </button>
+          </div>
+
+          <!-- PASSO 5 -->
+          <div class="slide uk-position-top"
+               style="top:35%;"
+               [class.ativo]="passoAtual === 5">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Qual o setor de atividade? <span style="color:#ff3860;">*</span>
+            </label>
+
+            <div class="uk-flex uk-flex-column" 
+                 style="max-width:150px;"
+                 [ngStyle]="{'border': formulario.get('setor')?.invalid && (formulario.get('setor')?.dirty || formulario.get('setor')?.touched) ? '4px solid #f0506e' : 'none', 'padding': formulario.get('setor')?.invalid && (formulario.get('setor')?.dirty || formulario.get('setor')?.touched) ? '8px' : '0'}">
+              <label class="opcao-botao">
+                <input type="radio" 
+                       formControlName="setor" 
+                       value="industria" 
+                       (change)="formulario.get('setor')?.markAsTouched(); proximoPasso()"> 
+                Indústria
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="setor" 
+                       value="comercio" 
+                       (change)="formulario.get('setor')?.markAsTouched(); proximoPasso()"> 
+                Comércio
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="setor" 
+                       value="servico" 
+                       (change)="formulario.get('setor')?.markAsTouched(); proximoPasso()"> 
+                Serviço
+              </label>
+            </div>
+          </div>
+
+          <!-- PASSO 6 -->
+          <div class="slide uk-position-top"
+               style="top:25%;"
+               [class.ativo]="passoAtual === 6">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Qual área de atuação? <span style="color:#ff3860;">*</span>
+            </label>
+
+            <!-- Radio buttons para atuacao -->
+            <div class="uk-flex uk-flex-column"
+                 style="max-width:150px;"
+                 *ngIf="!mostarItem"
+                 [ngStyle]="{'border': formulario.get('atuacao')?.invalid && (formulario.get('atuacao')?.dirty || formulario.get('atuacao')?.touched) ? '4px solid #f0506e' : 'none', 'padding': formulario.get('atuacao')?.invalid && (formulario.get('atuacao')?.dirty || formulario.get('atuacao')?.touched) ? '8px' : '0'}">
+              <label class="opcao-botao">
+                <input type="radio" 
+                       formControlName="atuacao" 
+                       value="Alimentos" 
+                       (click)="formulario.get('atuacao')?.markAsTouched(); proximoPasso()"> 
+                Alimentos
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="atuacao" 
+                       value="Educação" 
+                       (change)="formulario.get('atuacao')?.markAsTouched(); proximoPasso()"> 
+                Educação
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="atuacao" 
+                       value="Transporte" 
+                       (change)="formulario.get('atuacao')?.markAsTouched(); proximoPasso()"> 
+                Transporte
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="atuacao" 
+                       value="Saúde" 
+                       (change)="formulario.get('atuacao')?.markAsTouched(); proximoPasso()"> 
+                Saúde
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       name="atuacao-outro" 
+                       placeholder="exemplo: Tecnologia"
+                       (change)="mostrarOutro(); formulario.get('atuacao')?.markAsTouched()"> 
+                Outro
+              </label>
+            </div>
+
+            <!-- Campo para "Outro" - aparece quando mostarItem é true -->
+            <div *ngIf="mostarItem" class="uk-margin-top">
+              <label style="color:#fff;">
+                Especifique a área de atuação:
+                <span style="color:#ff3860;">*</span>
+              </label>
+              <input class="uk-input" 
+                     formControlName="atuacaooutro" 
+                     placeholder="exemplo: Tecnologia, Construção, Agricultura..."
+                     type="text" 
+                     required
+                     [ngStyle]="{'border': formulario.get('atuacaooutro')?.invalid && (formulario.get('atuacaooutro')?.dirty || formulario.get('atuacaooutro')?.touched) ? '4px solid #f0506e' : '4px solid #d1d1d1'}">
+              <button type="button"
+                      class="uk-button uk-button-default uk-margin-top"
+                      (click)="proximoPasso()"
+                      [disabled]="formulario.get('atuacaooutro')?.invalid">
+                Continuar
+              </button>
+            </div>
+          </div>
+
+          <!-- PASSO 7 -->
+          <div class="slide uk-position"
+               style="top:25%;"
+               [class.ativo]="passoAtual === 7">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Qual o porte da sua empresa? <span style="color:#ff3860;">*</span>
+            </label>
+
+            <div class="uk-flex uk-flex-column" 
+                 style="max-width:250px;"
+                 [ngStyle]="{'border': formulario.get('porte')?.invalid && (formulario.get('porte')?.dirty || formulario.get('porte')?.touched) ? '4px solid #f0506e' : 'none', 'padding': formulario.get('porte')?.invalid && (formulario.get('porte')?.dirty || formulario.get('porte')?.touched) ? '8px' : '0'}">
+              <label class="opcao-botao">
+                <input type="radio" 
+                       formControlName="porte" 
+                       value="Até 10 funcionários" 
+                       (change)="formulario.get('porte')?.markAsTouched(); proximoPasso()"> 
+                Até 10 funcionários
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="porte" 
+                       value="De 11 a 50 funcionários" 
+                       (change)="formulario.get('porte')?.markAsTouched(); proximoPasso()"> 
+                De 11 a 50 funcionários
+              </label>
+
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="porte" 
+                       value="De 51 a 200 funcionários" 
+                       (change)="formulario.get('porte')?.markAsTouched(); proximoPasso()"> 
+                De 51 a 200 funcionários
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="porte" 
+                       value="De 201 a 500 funcionários" 
+                       (change)="formulario.get('porte')?.markAsTouched(); proximoPasso()"> 
+                De 201 a 500 funcionários
+              </label>
+              <label class="opcao-botao uk-margin-top">
+                <input type="radio" 
+                       formControlName="porte" 
+                       value="Acima de 500 funcionários" 
+                       (change)="formulario.get('porte')?.markAsTouched(); proximoPasso()"> 
+                Acima de 500 funcionários
+              </label>
+            </div>
+          </div>
+
+          <!-- PASSO 8 -->
+          <div class="slide uk-position-center-left"
+               style="top:10%;"
+               [class.ativo]="passoAtual === 8">
+
+            <div>
+              <button uk-scrollspy="cls: animation: uk-animation-slide-bottom; delay: 200" class="button-cima uk-flex uk-flex-middle uk-flex-center" type="button" (click)="anteriorPasso()"><span uk-icon="icon: arrow-up"></span>Voltar</button>
+            </div>
+
+            <label style="color:#fff;">
+              Qual solução da Gestdreams que a sua empresa procura como prioridade no atual momento?
+              <span style="color:#ff3860;">*</span>
+            </label>
+
+            <p style="color:white;">Pode marcar mais de uma opção, se quiser</p>
+
+            <div class="uk-flex uk-flex-middle uk-flex-center" 
+                 [ngStyle]="{'border': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '4px solid #f0506e' : 'none', 'padding': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '8px' : '0'}">
+              <label class="opcao-botao">
+                <input type="checkbox" 
+                       (change)="toggleServico('programa-1', $event)">
+                <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-1.png">
+              </label>
+              <label class="opcao-botao uk-margin-left">
+                <input type="checkbox" 
+                       (change)="toggleServico('programa-2', $event)">
+                <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-2.png">
+              </label>
+              <label class="opcao-botao uk-margin-left">
+                <input type="checkbox" 
+                       (change)="toggleServico('programa-3', $event)">
+                <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-3.png">
+              </label>
+              <label class="opcao-botao uk-margin-left">
+                <input type="checkbox" 
+                       (change)="toggleServico('programa-4', $event)">
+                <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-4.png">
+              </label>
+            </div>
+          </div>
+
+          <!-- Botão de Enviar final -->
+          <div class="uk-position-bottom" style="top:89%; z-index:3;">
+            <button type="submit"
+                    class="uk-button uk-button-default"
+                    [disabled]="formulario.invalid" >
+              Enviar
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- CHEVRONS -->
+      <div class="uk-position-bottom" style="background-color:#ff3860; z-index:2;">
+        <div style="padding:20px;">
+          <div class="uk-flex uk-flex-right">
+            <button (click)="anteriorPasso()"><span uk-icon="icon: chevron-up; ratio:1.5"></span></button>
+            <button (click)="proximoPasso()" class="uk-margin-left"><span uk-icon="icon: chevron-down; ratio:1.5"></span></button>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <!-- Formulário tela inteira -->
-  <div *ngIf="mostrarFormulario" class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport"
-       style="background-color:#000; overflow:hidden; padding:20px;">
-
-    <div style="width:90%;">
-
-      <!-- PASSO 1 -->
-      <form *ngIf="passoAtual === 0" class="uk-fieldset uk-text-left uk-animation-slide-bottom-small">
-        <div class="uk-margin">
-          <label style="color:#fff;">
-            Precisamos de algumas informações para começar. Qual é o seu nome completo? <span style="color:#ff3860;">*</span>
-          </label>
-          <input class="uk-input" type="text" required>
-        </div>
-        <button type="button" class="uk-button uk-button-primary" (click)="proximoPasso()">
-          <span uk-icon="icon: arrow-down"></span> Continuar
-        </button>
-      </form>
-
-      <!-- PASSO 2 -->
-      <form *ngIf="passoAtual === 1" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Por favor, deixe um e-mail para que possamos entrar em contato <span style="color:#ff3860;">*</span></label>
-          <input class="uk-input" type="email" required>
-        </div>
-        <button type="button" class="uk-button uk-button-primary" (click)="proximoPasso()">
-          Continuar
-        </button>
-      </form>
-
-      <!-- PASSO 3 -->
-      <form *ngIf="passoAtual === 2" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">E também um número de telefone <span style="color:#ff3860;">*</span></label>
-          <input class="uk-input" type="tel" required>
-        </div>
-        <button type="button" class="uk-button uk-button-primary" (click)="proximoPasso()">
-          Continuar
-        </button>
-      </form>
-
-      <!-- PASSO 4 -->
-      <form *ngIf="passoAtual === 3" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Qual empresa você representa? <span style="color:#ff3860;">*</span></label>
-          <input class="uk-input" type="text" required>
-        </div>
-        <button type="button" class="uk-button uk-button-primary" (click)="proximoPasso()">
-          Continuar
-        </button>
-      </form>
-
-      <!-- PASSO 5 -->
-      <form *ngIf="passoAtual === 4" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Em que cidade ela se localiza? <span style="color:#ff3860;">*</span></label>
-          <input class="uk-input" type="text" required>
-        </div>
-        <button type="button" class="uk-button uk-button-primary" (click)="proximoPasso()">
-          Continuar
-        </button>
-      </form>
-
-      <!-- PASSO 6 -->
-      <form *ngIf="passoAtual === 5" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Qual o setor de atividade? <span style="color:#ff3860;">*</span></label>
-        </div>
-        <div class="uk-flex uk-flex-column uk-width-1-1" style="max-width:150px;">
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1" (click)="proximoPasso()">
-            Indústria
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Comércio
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Serviço
-          </button>
-        </div>
-      </form>
-
-      <!-- PASSO 7 -->
-      <form *ngIf="passoAtual === 6" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Qual área de atuação? <span style="color:#ff3860;">*</span></label>
-        </div>
-        <div class="uk-flex uk-flex-column uk-width-1-1" style="max-width:150px;">
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1" (click)="proximoPasso()">
-            Alimentos
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Educação
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Transporte
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Saúde
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Outro
-          </button>
-        </div>
-      </form>
-
-      <!-- PASSO 8 -->
-      <form *ngIf="passoAtual === 7" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Qual o porte da sua empresa? <span style="color:#ff3860;">*</span></label>
-        </div>
-        <div class="uk-flex uk-flex-column uk-width-1-1" style="max-width:250px;">
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1" (click)="proximoPasso()">
-            Até 10 funcionários
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            De 11 a 50 funcionários
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            De 51 a 200 funcionários
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            De 201 a 500 funcionários
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Acima de 500 funcionários
-          </button>
-        </div>
-      </form>
-
-      <!-- PASSO 9 -->
-      <form *ngIf="passoAtual === 8" class="uk-fieldset uk-text-left uk-animation-slide-bottom">
-        <div class="uk-margin">
-          <label style="color:#fff;">Qual solução da Gestdreams que a sua empresa procura como prioridade no atual momento?</label>
-          <p style="color: white;">Pode marcar mais de uma opção, se quiser</p>
-        </div>
-        <div class="uk-flex uk-flex-column uk-width-1-1" style="max-width:450px;">
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1" (click)="proximoPasso()">
-            Programa de saúde emocional do trabalhador
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Mentoria de saúde emocional para gestores
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="proximoPasso()">
-            Atendimento à empresa
-          </button>
-          <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" (click)="anterioPasso()">
-            Gestão de programa de saúde emocional para empresa
-          </button>
-        </div>
-      </form>
-
+    <!-- ERRO -->
+    <div *ngIf="mostrarErro" class="alerta-erro">
+      {{ mensagemErro }}
     </div>
+
   </div>
 </div>
