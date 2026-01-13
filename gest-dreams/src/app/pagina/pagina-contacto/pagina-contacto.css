@@ -8,3 +8,15 @@
 .uk-overlay-primary{
     background-color: #0000003c;
 }
+
+@media (min-width:344px) and (max-width:767px)  {
+    .uk-background-cover{
+        height: 50vh !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px)  {
+    .uk-background-cover{
+        height: 30vh !important;
+    }
+}

@@ -1,97 +1,152 @@
-<div  class="uk-navbar-container uk-position-fixed uk-position-top"
-  [class.navbar-scrolled]="showWhiteNavbar"
-  [class.navbar-hidden]="hideNavbar"
-  style="z-index: 1000;">
-    <div class="uk-container">
-        <div uk-navbar>
-            <div class="uk-navbar-left">
-                <div class="uk-navbar-item">
-                    <a class="uk-logo"  href="#" aria-label="Back to Home">
-                        <img 
-                            [src]="showWhiteNavbar ? 'imagens/upload/logo/logo-gestdreams-original.svg' : 'imagens/upload/logo/logo-gestdreams.svg'" 
-                            width="160" 
-                            alt="GestDreams Logo"
-                        >
-                    </a>
-                </div>
-            </div>
-            <div class="uk-navbar-center">
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href="javascript:void(0)" >GestDreams</a>
-                        <div class="uk-navbar-dropdown back uk-padding-large custom-dropdown uk-navbar-dropdown-width-1-1"
-                 uk-dropdown="mode: click, hover; delay-show: 200; delay-hide: 200; stretch: x"
-                 hidden style="background-color: white;">
-              <div class="uk-drop-grid uk-child-width-1-2 uk-grid uk-drop-grid-divider uk-padding-medium uk-text-left">
-                <div>
-                  <h1 style="color: #00224b; font-size: 32px; font-weight: 500;">
-                    Iniciativas estratégicas focadas na saúde organizacional e nos resultados humanos.
-                  </h1>
-                  <p style="color: #00224b; font-size: 18px;">
-                    Do diagnóstico às ações práticas, cuidamos da saúde mental da sua equipa.
-                  </p>
-                </div>
-                <div class="uk-grid uk-child-width-1-2@s" uk-grid>
-                  <!-- Primeira coluna -->
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav" style="max-width: 250px;">
-                      <li routerLinkActive="uk-active"><a class="dropdown-link" [routerLink]="['/sobre-gestdreams']">Sobre a GestDreams</a></li>
-                    </ul>
-                  </div>
-                  <!-- Segunda coluna -->
-                  <div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-                        
-                    </li>
-                    <li>
-                        <a [routerLink]="['/programas']">Programas</a>
-                    </li>
-                    <li>
-                        <a uk-scroll href="#inovacao">Política SG</a>
-                    </li>
-                    <li >
-                        <a href="javascript:void(0)">Projectos</a>
-                        <div class="uk-navbar-dropdown back uk-padding-large custom-dropdown uk-navbar-dropdown-width-1-1"
-                 uk-dropdown="mode: click, hover; delay-show: 200; delay-hide: 200; stretch: x"
-                 hidden style="background-color: white;">
-              <div class="uk-drop-grid uk-child-width-1-2 uk-grid uk-drop-grid-divider uk-padding-medium uk-text-left">
-                <div>
-                  <h1 style="color: #00224b; font-size: 32px; font-weight: 500;">
-                    Iniciativas estratégicas focadas na saúde organizacional e nos resultados humanos.
-                  </h1>
-                  <p style="color: #00224b; font-size: 18px;">
-                    Do diagnóstico às ações práticas, cuidamos da saúde mental da sua equipa.
-                  </p>
-                </div>
-                <div class="uk-grid uk-child-width-1-2@s" uk-grid>
-                  <!-- Primeira coluna -->
-                  <div>
-                    <ul class="uk-nav uk-navbar-dropdown-nav" style="max-width: 250px;">
-                      <li routerLinkActive="uk-active"><a class="dropdown-link" [routerLink]="['/mentoria-de-saude-mental-para-gestores']">Onda branca</a></li>
-                    </ul>
-                  </div>
-                  <!-- Segunda coluna -->
-                  <div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-                    </li>
-                    <li>
-                        <a [routerLink]="['/contacto']" >Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="uk-navbar-right">
-                <div class="uk-navbar-item">
-                    <a [routerLink]="['/perfil-empresa']" class="uk-button uk-button-defaul" style="border-radius: 5px; border: 1px #fff solid;">Transforme sua Empresa</a>
-                </div>
-            </div>
+<div class="uk-navbar-container uk-position-fixed uk-position-top"
+     [class.navbar-scrolled]="showWhiteNavbar"
+     [class.navbar-hidden]="hideNavbar"
+     style="z-index: 1000;">
+  <div class="uk-container">
+    <div uk-navbar>
+      <!-- Esquerda: Logo -->
+      <div class="uk-navbar-left">
+        <div class="uk-navbar-item">
+          <a class="uk-logo" href="#" aria-label="Back to Home">
+            <img 
+              [src]="showWhiteNavbar ? 'imagens/upload/logo/logo-gestdreams-original.svg' : 'imagens/upload/logo/logo-gestdreams.svg'" 
+              width="160" 
+              alt="GestDreams Logo"
+              loading="lazy"
+            >
+          </a>
         </div>
+      </div>
+
+      <!-- Centro: Links -->
+      <div class="uk-navbar-center uk-visible@s">
+        <ul class="uk-navbar-nav">
+          <!-- Institucional Dropdown -->
+          <li>
+            <a href="javascript:void(0)">Institucional</a>
+            <div class="uk-navbar-dropdown back uk-padding-large custom-dropdown uk-navbar-dropdown-width-1-1"
+                 uk-dropdown="mode: click, hover; delay-show: 200; delay-hide: 200; stretch: x"
+                 hidden style="background-color: white;">
+              <div class="uk-drop-grid uk-child-width-1-2 uk-grid uk-drop-grid-divider uk-padding-medium uk-text-left">
+                <!-- Descrição principal -->
+                <div>
+                  <h1 style="color: #00224b; font-size: 1.5rem; font-weight: 500; font-family: 'Urbanist';">
+                    A GestDreams atua para promover a saúde organizacional e o bem-estar das equipes.
+                  </h1>
+                  <p style="color: #00224b; font-size: 18px;">
+                    Combinamos diagnóstico preciso e ações práticas para transformar a gestão e os resultados humanos da sua empresa.
+                  </p>
+                </div>
+                <!-- Links detalhados -->
+                <div class="uk-grid uk-child-width-1-2@s" uk-grid>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav" style="max-width: 250px;">
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/sobre-gestdreams']">
+                          Sobre a GestDreams
+                        </a>
+                      </li>
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/sobre-gestdreams']" fragment="missao">
+                          Missão
+                        </a>
+                      </li>
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/sobre-gestdreams']" fragment="visao">
+                          Visão
+                        </a>
+                      </li>
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/sobre-gestdreams']" fragment="valores">
+                          Valores
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav" style="max-width: 250px;">
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/sobre-gestdreams']" fragment="lideranca">
+                          Liderança
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Programas -->
+          <li>
+            <a [routerLink]="['/programas']">Programas</a>
+          </li>
+
+          <!-- Política SG -->
+          <li>
+            <a uk-scroll href="#inovacao">Política SG</a>
+          </li>
+
+          <!-- Casos Dropdown -->
+          <li>
+            <a href="javascript:void(0)">Iniciativas</a>
+            <div class="uk-navbar-dropdown back uk-padding-large custom-dropdown uk-navbar-dropdown-width-1-1"
+                 uk-dropdown="mode: click, hover; delay-show: 200; delay-hide: 200; stretch: x"
+                 hidden style="background-color: white;">
+              <div class="uk-drop-grid uk-child-width-1-2 uk-grid uk-drop-grid-divider uk-padding-medium uk-text-left">
+                <!-- Descrição principal -->
+                <div>
+                  <h1 style="color: #00224b; font-size: 1.5rem; font-weight: 500; font-family: 'Urbanist';">
+                    Descubra como nossas iniciativas impactaram positivamente organizações.
+                  </h1>
+                  <p style="color: #00224b; font-size: 18px;">
+                    Fortalecendo equipes, melhorando performance e promovendo saúde mental no ambiente corporativo.
+                  </p>
+                </div>
+                <!-- Links detalhados -->
+                <div class="uk-grid uk-child-width-1-2@s" uk-grid>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav" style="max-width: 250px;">
+                      <li routerLinkActive="uk-active">
+                        <a class="dropdown-link" [routerLink]="['/mentoria-de-saude-mental-para-gestores']">
+                          Onda Branca
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <!-- Espaço para futuros cases -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contacto -->
+          <li>
+            <a [routerLink]="['/contacto']">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Direita: Call to Action -->
+      <div class="uk-navbar-right">
+        
+        <div class="uk-navbar-item uk-visible@s">
+          <a [routerLink]="['/perfil-empresa']" class="uk-button uk-button-defaul botao-left" style="border-radius: 5px; border: 1px #fff solid;">
+            Transforme sua Empresa
+          </a>
+        </div>
+        <div class="uk-navbar-item">
+          <!-- BOTÃO MOBILE -->
+        <div class="uk-navbar-right uk-hidden@s">
+          <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav">
+            <span style="color: white; font-weight: bold;" class="uk-icon" uk-icon="icon: more-vertical"></span> 
+          </a>
+        </div>
+        </div>
+        
+      </div>
     </div>
+  </div>
 </div>

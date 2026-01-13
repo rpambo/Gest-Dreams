@@ -1,62 +1,36 @@
-.back{
-  background-image: url(/imagens/upload/bg/background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* Degradê nos números */
-.gradient-number {
-    font-size: 60px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #00aaff, #0d5a90);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    margin-bottom: 10px;
+.uk-card-title{
+  font-size: 4.8rem;
+  font-weight: bold;
+  font-family: "Urbanist";
+  color: #fa8072;
+  
 }
 
-.gradient-number.big {
-    font-size: 120px;
-    line-height: 1;
+p{
+  font-family: 'Urbanist';
+  font-weight: 400;
 }
 
-.metric.destaque {
-  border-top: 1px solid transparent; /* precisa ser transparente */
-  border-image: radial-gradient(circle 120px at center, #cbe7fa, #00385b) 1;
-  border-image-slice: 1;
-  margin-bottom: 60px;
-  padding-top: 20px;
-  text-align: center;
+@media (min-width: 344px) and (max-width: 768px) {
+  .uk-card-title{
+    font-size: 3rem;
+    text-align: center;
+  }
+  p{
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+  }
+  .uk-grid > div {
+    border: none !important;
+  }
 }
 
-
-/* Efeito no divider animado */
-@keyframes grow {
-    from { width: 20%; }
-    to { width: 80%; }
-}
-
-.titulo-principal {
-  font-size: 16px;
-  color: white !important;
-  font-weight: 300;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-.titulo-principal .linha {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 50%;
-  height: 3px;
-  background: linear-gradient(90deg, #00aaff, #0d5a90);
-  display: block;
-  animation: grow 2s infinite alternate;
-}
-
-.titulo-metricas{
-  max-width: 550px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .uk-card-title{
+    font-size: 3rem;
+  }
+  p{
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+  }
 }

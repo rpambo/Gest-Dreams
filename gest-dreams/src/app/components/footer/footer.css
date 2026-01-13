@@ -1,7 +1,7 @@
 .text{
     color: rgba(255, 255, 255, 0.753);
     font-family: "Urbanist";
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
 }
 
@@ -10,6 +10,16 @@ h3{
     font-size: 1.2rem;
     font-family: "Urbanist";
     font-weight: bold;
+}
+
+.uk-button{
+    background-color: #f5f5dc;
+    color: #008080;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-family: 'Urbanist';
+    font-weight: 600;
 }
 
 ul li a{
@@ -26,4 +36,10 @@ ul li a{
 
 hr{
     border:  1px solid #ffffff45;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .uk-button{
+        font-size: .7rem;
+    }       
 }

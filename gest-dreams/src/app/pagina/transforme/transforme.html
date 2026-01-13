@@ -340,29 +340,29 @@
                  [ngStyle]="{'border': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '4px solid #f0506e' : 'none', 'padding': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '8px' : '0'}">
               <label class="opcao-botao">
                 <input type="checkbox" 
-                       (change)="toggleServico('programa-1', $event)">
+                       (change)="toggleServico('imagens/upload/programas/programa-1.png', $event)">
                 <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-1.png">
               </label>
               <label class="opcao-botao uk-margin-left">
                 <input type="checkbox" 
-                       (change)="toggleServico('programa-2', $event)">
+                       (change)="toggleServico('imagens/upload/programas/programa-2.png', $event)">
                 <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-2.png">
               </label>
               <label class="opcao-botao uk-margin-left">
                 <input type="checkbox" 
-                       (change)="toggleServico('programa-3', $event)">
+                       (change)="toggleServico('imagens/upload/programas/programa-3.png', $event)">
                 <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-3.png">
               </label>
               <label class="opcao-botao uk-margin-left">
                 <input type="checkbox" 
-                       (change)="toggleServico('programa-4', $event)">
+                       (change)="toggleServico('imagens/upload/programas/programa-4.png', $event)">
                 <img style="border-radius: 5px;" width="210" src="imagens/upload/programas/programa-4.png">
               </label>
             </div>
           </div>
 
           <!-- Botão de Enviar final -->
-          <div class="uk-position-bottom" style="top:89%; z-index:3;">
+          <div class="uk-position-bottom button" style="top:89%; z-index:3;">
             <button type="submit"
                     class="uk-button uk-button-default"
                     [disabled]="formulario.invalid" >

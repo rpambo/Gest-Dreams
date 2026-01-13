@@ -6,7 +6,6 @@ export interface FormularioDados {
   cidade: string;
   setor: string;
   atuacao: string;
-  atuacaooutro: string;
   porte: string;
-  servico: string[];
+  servicos: string[];
 }

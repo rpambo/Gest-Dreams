@@ -50,3 +50,33 @@
     font-family: "Space Grotesk";
     color: white;
 }
+
+@media (min-width:344px) and (max-width:767px)  {
+    .hero-content{
+        height: 70vh !important;
+    }
+    .uk-heading-small{
+      font-size: 1.5rem;
+    }
+    .uk-container{
+      display: flex;
+      align-items: center;      /* centraliza verticalmente */
+      justify-content: center;  /* centraliza horizontalmente */
+      min-height: 60vh;        /* altura da tela inteira */
+    }
+    .uk-button{
+      font-size: 1rem !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px)  {
+    .hero-content{
+        height: 70vh !important;
+    }
+    .uk-container{
+      display: flex;
+      align-items: center;      /* centraliza verticalmente */
+      justify-content: center;  /* centraliza horizontalmente */
+      min-height: 70vh;        /* altura da tela inteira */
+    }
+}

@@ -53,7 +53,9 @@
 .kenburns-infinite {
   animation: kenburns 10s ease-in-out infinite alternate;
   transform-origin: center;
+  overflow: hidden;
 }
+
 
 @keyframes kenburns {
   from {
@@ -61,5 +63,21 @@
   }
   to {
     transform: scale(1.15);
+  }
+}
+
+@media (min-width: 344px) and (max-width: 767px) {
+  .text-space{
+    font-size: 1.5rem;
+  }
+  .uk-position-bottom-left{
+    left: 5% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .uk-background-cover {
+    background-position: center center !important; /* centraliza */
+    background-size: cover;                        /* mantém proporção */
   }
 }

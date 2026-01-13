@@ -8,7 +8,7 @@ import { RouterLink } from "@angular/router";
   styleUrl: './navbar.css',
 })
 export class Navbar {
-   lastScrollTop = 0;
+  lastScrollTop = 0;
   showWhiteNavbar = false;
   hideNavbar = false;
 

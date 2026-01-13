@@ -26,4 +26,30 @@ p{
     font-family: "Urbanist";
     color: #272727;
     font-weight: 700;
+    text-transform: uppercase;
+    max-width: 950px;
+    color: #008080;
+}
+
+.text-servico.reveal-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.text-servico {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .text-servico{
+    font-size: 2rem !important;
+  }
+}
+
+@media (min-width: 344px) and (max-width: 767px){
+  .text-servico{
+    font-size: 1.5rem !important;
+  }
 }

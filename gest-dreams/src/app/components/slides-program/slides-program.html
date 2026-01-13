@@ -1,18 +1,19 @@
-<div uk-slideshow="autoplay: true; animation: slide; pause-on-hover: false; autoplay-interval: 10000; ratio: false">
-  
-  <div class="uk-slideshow-items" uk-height-viewport="offset-top: true">
+<div class="uk-section uk-padding-remove">
+  <div class="uk-overflow-hidden uk-position-relative" style="height: 80vh;">
     
-    <div>
-      <img src="imagens/upload/slides/imagem-1.png"
-           class="uk-animation-kenburns kenburns-infinite uk-animation-reverse uk-transform-origin-center"
-           alt="">
-      
-      <div class="uk-position-cover uk-overlay uk-overlay-default">
-        <div class="uk-position-bottom-left" style="bottom: 20%;left: 10%;">
-          <h1 class="text-space">
-            Equipe GestDreams: comprometida com qualidade, saúde e resultados efetivos nas organizações.
-          </h1>
-        </div>
+    <!-- IMAGEM ANIMADA -->
+    <div
+      class="kenburns-infinite uk-background-cover uk-border-rounded uk-position-cover"
+      uk-img
+      data-src="imagens/upload/slides/imagem-1.png"
+    ></div>
+
+    <!-- TEXTO ESTÁTICO -->
+    <div class="uk-position-cover uk-overlay uk-overlay-default">
+      <div class="uk-position-bottom-left" style="bottom: 20%; left: 10%;">
+        <h1 class="text-space">
+          Equipe GestDreams: comprometida com qualidade, saúde e resultados efetivos nas organizações.
+        </h1>
       </div>
     </div>
 

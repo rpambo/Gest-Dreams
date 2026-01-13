@@ -1,10 +1,13 @@
-.back{
-  background-image: url(/imagens/upload/bg/background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+
+
+.titulo {
+    font-family: "Space Grotesk", sans-serif; 
+    color: #272727; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    text-transform: uppercase;
 }
+
 
 blockquote{
     font-size: 16px !important;
@@ -29,32 +32,6 @@ blockquote{
   display: inline-block;
 }
 
-@keyframes grow {
-    from { width: 20%; }
-    to { width: 80%; }
-}
-
-.titulo-principal .linha {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 50%;
-  height: 3px;
-  background: linear-gradient(90deg, #00aaff, #0d5a90);
-  display: block;
-  animation: grow 2s infinite alternate;
-}
-
-.titulo-metricas{
-  max-width: 550px;
-}
-
-@keyframes growMobile {
-  from { width: 0; }
-  to { width: 25%; }
-}
-
 @media (max-width: 768px) {
     .uk-background-cover {
     height: 200px !important; /* ajusta conforme o design */
@@ -77,146 +54,4 @@ blockquote{
     width: 25%;
     animation: growMobile 2s infinite alternate;
   }
-}
-
-
-
-.missao-section {
-  position: relative;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background: url("/imagens/upload/sobre/missao.png") no-repeat center center;
-  background-size: cover;
-  padding: 80px 20px;
-  color: white;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap; /* ajuda no mobile */
-}
-
-/* Título vertical no desktop */
-.missao-title {
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 34px;
-  font-weight: bold;
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-}
-
-/* Texto alinhado à direita no desktop */
-.missao-text {
-  position: relative;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: 100px;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-
-.visao-section {
-  position: relative;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background: url("/imagens/upload/sobre/vissao.png") no-repeat center center;
-  background-size: cover;
-  padding: 80px 20px;
-  color: white;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-/* título vertical no desktop */
-.visao-title {
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 34px;
-  font-weight: bold;
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-}
-
-/* texto à direita */
-.visao-text {
-  position: relative;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: 100px;
-  font-weight: 500;
-  font-size: 18px;
-  display: grid;
-  gap: 20px;
-}
-
-
-.valores-section {
-  position: relative;
-  border-radius: 10px;
-  background: url("/imagens/upload/sobre/valores.png") no-repeat center center;
-  background-size: cover;
-  padding: 60px 40px;
-  color: white;
-  overflow: hidden;
-}
-
-/* Overlay para dar contraste no texto */
-.valores-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-.valores-container {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 40px;
-  width: 100%;
-}
-
-/* Título sempre na vertical à esquerda */
-.valores-title {
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-/* Conteúdo flui normalmente (faz crescer o fundo) */
-.valores-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.valores-grid h5 {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: white;
 }

@@ -88,3 +88,48 @@ hr{
   border: 1px solid #008080;
   color: #008080;
 }
+
+@media (min-width:344px) and (max-width:767px)  {
+    .uk-card{
+      margin-bottom: 10px;
+    }
+    .uk-slideshow-items{
+      height: 450px !important;
+    }
+    .mobile{
+      width: 100% !important;
+    }
+    .text{
+    font-size: 1.8rem;
+  }
+  .text-junta{
+    font-size: 3.5rem;
+  }
+  .uk-slideshow-items{
+    height: 630px !important;
+  }
+  .uk-button{
+    font-size: .9rem !important;
+  }
+  .social-icons{
+    width: 70px;
+  }
+  .button{
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .text{
+    font-size: 1.8rem;
+  }
+  .text-junta{
+    font-size: 3.5rem;
+  }
+  .uk-slideshow-items{
+    height: 630px !important;
+  }
+  .uk-button{
+    font-size: .9rem !important;
+  }
+}

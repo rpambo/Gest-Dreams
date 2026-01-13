@@ -1,21 +1,67 @@
-.back{
-  background-image: url(/imagens/upload/bg/background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.text-servico{
+    font-size: 2.5rem;
+    font-family: "Urbanist";
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 950px;
+}
+
+.uk-card-icon{
+  border-radius: 5px;
+  background-color: #F1F6FB;
+  border-bottom: 5px solid #008080;
+}
+
+.text-servico.reveal-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.text-servico {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.titulo {
+    font-family: "Space Grotesk", sans-serif; 
+    color: #fff; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 p{
     font-size: 1rem;
     font-family: "Space Grotesk", sans-serif;
-    color: white;
-    font-weight: 500;
+    color: #fff;
+    font-weight: 400;
 }
 
 .uk-titulo{
     font-size: 2.5rem;
     font-family: "Urbanist";
-    font-weight: bold;
-    color: white;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .text-servico{
+    font-size: 2rem !important;
+  }
+  .founder-img{
+    width: 250px !important;
+  }
+
+}
+
+@media (min-width: 344px) and (max-width: 767px){
+  .text-servico{
+    font-size: 1.5rem !important;
+  }
+  .uk-titulo{
+    font-size: 2rem;
+  }
 }

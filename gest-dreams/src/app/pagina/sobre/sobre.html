@@ -4,14 +4,13 @@
     <div class="uk-container uk-padding-large">
         <div>
           <h1 class="uk-heading-small uk-margin-remove" 
-              style="color: white; font-weight: 400; color: #212121;">
+              style="color: white; font-weight: bold; color: #212121; font-family: 'Urbanist';">
             Somos uma iniciativa líder em Angola, dedicada ao bem-estar e à produtividade, comprometida com a inovação, inclusão e impacto social
           </h1>
           <!-- Botão abre modal -->
-        <a href="#modal-servicos" 
-           uk-toggle 
+        <a [routerLink]="['/programas']" 
            class="uk-button uk-button-default uk-margin-medium-top" 
-           style="background-color: #036ef2; border-radius: 5px; font-size: 18px; padding: 10px 15px; color: white; font-weight: 500;">
+           style="background-color: #036ef2; border-radius: 5px; font-size: 18px; padding: 10px 15px; color: white; font-weight: 500; font-family: 'Urbanist';">
           Nossos serviços
         </a>
       </div>
@@ -19,5 +18,11 @@
   </div>
 </div>
 <app-quem-somos></app-quem-somos>
+<app-metricas-home></app-metricas-home>
+<app-historia></app-historia>
+<app-essencia></app-essencia>
+<div id="lideranca">
+  <app-founder></app-founder>
+</div>
 <app-clientes-parceiro></app-clientes-parceiro>
 <app-footer></app-footer>

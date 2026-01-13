@@ -104,7 +104,7 @@ onMouseLeave(index: number) {
   updateCardsPerSlide() {
     const width = window.innerWidth;
     if (width >= 1200) this.cardsPerSlide = 3;
-    else if (width >= 768) this.cardsPerSlide = 2;
+    else if (width >= 768) this.cardsPerSlide = 1.5;
     else this.cardsPerSlide = 1;
   }
 

@@ -1,27 +1,34 @@
 definitions:
-  types.Bruchura:
-    properties:
-      email:
-        type: string
-    type: object
   types.ComplaintPayload:
     properties:
       email:
         type: string
-      mensagem:
+      message:
         type: string
       name:
         type: string
     type: object
-  types.InfoEmpresa:
+  types.FormularioDados:
     properties:
+      atuacao:
+        type: string
+      cidade:
+        type: string
       email:
         type: string
-      mensagem:
+      empresa:
         type: string
       name:
         type: string
-      servico:
+      porte:
+        type: string
+      servicos:
+        items:
+          type: string
+        type: array
+      setor:
+        type: string
+      telefone:
         type: string
     type: object
 info:
@@ -40,49 +47,6 @@ paths:
       summary: Healthcheck
       tags:
       - ops
-  /v1/brochura/email:
-    post:
-      consumes:
-      - application/json
-      description: Recebe apenas o email do cliente, envia um email de confirmação
-        para ele e uma notificação para a equipa da Onda Branca
-      parameters:
-      - description: Email do cliente
-        in: body
-        name: payload
-        required: true
-        schema:
-          $ref: '#/definitions/types.Bruchura'
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: Mensagem de sucesso
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-        "400":
-          description: Erro de requisição inválida
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-        "429":
-          description: Muitas requisições
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-        "500":
-          description: Erro interno do servidor
-          schema:
-            additionalProperties:
-              type: string
-            type: object
-      summary: Envia confirmação de pedido de brochura
-      tags:
-      - brochures
   /v1/complaints/email:
     post:
       consumes:
@@ -130,14 +94,14 @@ paths:
         name: payload
         required: true
         schema:
-          $ref: '#/definitions/types.InfoEmpresa'
+          $ref: '#/definitions/types.FormularioDados'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/types.InfoEmpresa'
+            $ref: '#/definitions/types.FormularioDados'
         "400":
           description: Bad Request
           schema:

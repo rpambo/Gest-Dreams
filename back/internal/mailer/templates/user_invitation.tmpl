@@ -1,4 +1,4 @@
-{{define "subject"}} Recebemos o seu pedido - Onda Branca {{end}}
+{{define "subject"}} Recebemos o seu pedido - GestDreams {{end}}
 
 {{define "body"}}
 <!DOCTYPE html>
@@ -7,141 +7,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      body {
-        font-family: "Segoe UI", Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-        color: #323130;
-      }
-      .container {
-        max-width: 600px;
-        margin: 40px auto;
-        background: #ffffff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        border: 1px solid #e1dfdd;
-      }
-      .header {
-        background: #41a3f5;
-        padding: 20px;
-        text-align: center;
-        color: #ffffff;
-      }
-      .header img {
-        width: 80px;
-        height: auto;
-        margin-bottom: 10px;
-      }
-      .header h1 {
-        margin: 0;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .content {
-        padding: 30px;
-      }
-      h2 {
-        color: #41a3f5;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-      .details {
-        background: #f0f8ff;
-        border: 1px solid #e1dfdd;
-        border-radius: 6px;
-        padding: 15px;
-        margin: 25px 0;
-      }
-      .footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 12px;
-        color: #605e5c;
-        background: #f3f2f1;
-      }
-      a.button {
-        display: inline-block;
-        background-color: #41a3f5;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        margin-top: 15px;
-      }
-      .social-icons {
-        margin-top: 15px;
-      }
-      .social-icons a {
-        display: inline-block;
-        margin: 0 5px;
-        text-decoration: none;
-      }
-      .social-icons img {
-        width: 24px;
-        height: 24px;
-      }
+      body { font-family: "Segoe UI", Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; color: #323130; }
+      .container { max-width: 600px; margin: 40px auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #e1dfdd; }
+      .header { background: #41a3f5; padding: 20px; text-align: center; color: #ffffff; }
+      .header img { width: 80px; height: auto; margin-bottom: 10px; }
+      .header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+      .content { padding: 30px; }
+      h2 { color: #41a3f5; margin-bottom: 20px; font-weight: 600; }
+      .details { background: #f0f8ff; border: 1px solid #e1dfdd; border-radius: 6px; padding: 15px; margin: 25px 0; }
+      .footer { text-align: center; padding: 20px; font-size: 12px; color: #605e5c; background: #f3f2f1; }
+      a.button { display: inline-block; background-color: #41a3f5; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; margin-top: 15px; }
+      .social-icons { margin-top: 15px; }
+      .social-icons a { display: inline-block; margin: 0 5px; text-decoration: none; }
+      .social-icons img { width: 24px; height: 24px; }
+      .servicos img { margin-right: 10px; border-radius: 5px; width: 150px; }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Cabeçalho -->
       <div class="header">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Logotipo Onda Branca">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Logotipo GestDreams">
         <h1>Pedido Recebido com Sucesso!</h1>
       </div>
 
-      <!-- Conteúdo -->
       <div class="content">
         <p>Olá {{.Name}},</p>
-        <p>
-          Recebemos o seu pedido e estamos muito felizes pelo seu interesse nos nossos serviços de saúde mental e produtividade no trabalho.
-          A nossa equipa irá analisar o seu pedido com atenção e entrar em contacto consigo em breve.
-        </p>
+        <p>Recebemos o seu pedido e estamos muito felizes pelo seu interesse nos nossos serviços de saúde mental e produtividade no trabalho. A nossa equipa irá analisar o seu pedido com atenção e entrar em contacto consigo em breve.</p>
 
         <h2>Resumo do Pedido</h2>
         <div class="details">
           <p><b>Nome:</b> {{.Name}}</p>
           <p><b>Email:</b> {{.Email}}</p>
-          <p><b>Contacto:</b> {{.Contact}}</p>
-          <p><b>Serviço solicitado:</b> {{.Service}}</p>
-          <p><b>Data/Hora do Pedido:</b> {{.Year}}</p>
+          <p><b>Contacto:</b> {{.Telefone}}</p>
+          <p><b>Empresa:</b> {{.Empresa}}</p>
+          <p><b>Cidade:</b> {{.Cidade}}</p>
+          <p><b>Setor:</b> {{.Setor}}</p>
+          <p><b>Área de atuação:</b> {{.Atuacao}}</p>
+          <p><b>Porte da empresa:</b> {{.Porte}}</p>
+
+          <p><b>Serviço(s) solicitado(s):</b></p>
+          <div class="servicos">
+            {{range .Servicos}}
+              <div>
+                <div>
+                  <img src="{{.}}" alt="Serviço solicitado" style="width:150px; border-radius:5px;">
+                </div>
+              </div>
+            {{end}}
+          </div>
+
+          <p><b>Data/Hora do Pedido:</b> {{.Data}}</p>
         </div>
 
-        <p>
-          Queremos garantir que terá todo o suporte necessário para alcançar bem-estar e produtividade.  
-          Se tiver dúvidas, estamos à disposição.
-        </p>
+        <p>Queremos garantir que terá todo o suporte necessário para alcançar bem-estar e produtividade. Se tiver dúvidas, estamos à disposição.</p>
 
-        <a href="mailto:suporte@ondabranca.com" class="button">Contactar a Onda Branca</a>
+        <a href="mailto:geral@gestdreams.com" class="button">Contactar a Onda Branca</a>
 
         <div class="social-icons">
           <p>Siga-nos nas redes sociais:</p>
-          <a href="https://www.facebook.com/ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-          </a>
-          <a href="https://www.linkedin.com/company/ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
-          </a>
-           <a href="https://www.youtube.com/@ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-          </a>
-          <a href="https://open.spotify.com/show/ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify">
-          </a>
-          <a href="https://podcasts.apple.com/pt/podcast/ondaBranca" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="Apple Podcast">
-          </a>
+          <a href="https://www.facebook.com/ondaBranca" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/ondaBranca" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/company/ondaBranca" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"></a>
         </div>
       </div>
 
-      <!-- Rodapé -->
       <div class="footer">
-        &copy; {{.Year}} Onda Branca - Cuidando da sua saúde mental e produtividade no trabalho.
+        &copy; {{.Data}} Gestdreams - Excelência Corporativa, Transformação Humana.
       </div>
     </div>
   </body>

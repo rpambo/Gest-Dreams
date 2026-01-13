@@ -12,10 +12,16 @@ ul li a{
 
 /* estado normal */
 .uk-navbar-dropdown .uk-navbar-dropdown-nav li > a.dropdown-link {
-  font-size: 18px;
+  font-size: 1rem;
   color: #272727 !important;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.uk-navbar-dropdown .uk-navbar-dropdown-nav li:hover > a.dropdown-link {
+  color: #fa8072 !important;
 }
 
 .uk-drop-grid {
@@ -56,6 +62,10 @@ ul li a:hover{
   transform: translateY(-100%);
 }
 
+.showWhiteNavbar{
+  background-color: #272727;
+}
+
 .uk-navbar-nav > li > a {
   transition: color 0.3s ease;
 }
@@ -76,4 +86,34 @@ ul li a:hover{
 .navbar-scrolled .uk-button {
   color: #272727;
   border: 1px solid #272727 !important;
+}
+
+p{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+   .botao-left{
+    font-size: .6rem !important;
+    padding: 0 7px;
+   }
+   ul li a{
+    font-size: .7rem !important;
+   }
+   .uk-logo{
+    width: 120px !important;
+   }
+}
+
+@media (min-width: 344px) and (max-width: 767px){
+   .botao-left{
+    font-size: .5rem !important;
+    padding: 0 7px;
+   }
+   ul li a{
+    font-size: .7rem !important;
+   }
+   .uk-logo{
+    width: 120px !important;
+   }
 }

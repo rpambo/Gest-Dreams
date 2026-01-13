@@ -35,70 +35,6 @@ const docTemplate = `{
                 }
             }
         },
-        "/v1/brochura/email": {
-            "post": {
-                "description": "Recebe apenas o email do cliente, envia um email de confirmação para ele e uma notificação para a equipa da Onda Branca",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "brochures"
-                ],
-                "summary": "Envia confirmação de pedido de brochura",
-                "parameters": [
-                    {
-                        "description": "Email do cliente",
-                        "name": "payload",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/types.Bruchura"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Mensagem de sucesso",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Erro de requisição inválida",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "429": {
-                        "description": "Muitas requisições",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "500": {
-                        "description": "Erro interno do servidor",
-                        "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "/v1/complaints/email": {
             "post": {
                 "description": "Recebe uma reclamação e envia email de confirmação para o cliente e notificação para a equipa de suporte",
@@ -171,7 +107,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/types.InfoEmpresa"
+                            "$ref": "#/definitions/types.FormularioDados"
                         }
                     }
                 ],
@@ -179,7 +115,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/types.InfoEmpresa"
+                            "$ref": "#/definitions/types.FormularioDados"
                         }
                     },
                     "400": {
@@ -205,21 +141,13 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "types.Bruchura": {
-            "type": "object",
-            "properties": {
-                "email": {
-                    "type": "string"
-                }
-            }
-        },
         "types.ComplaintPayload": {
             "type": "object",
             "properties": {
                 "email": {
                     "type": "string"
                 },
-                "mensagem": {
+                "message": {
                     "type": "string"
                 },
                 "name": {
@@ -227,19 +155,37 @@ const docTemplate = `{
                 }
             }
         },
-        "types.InfoEmpresa": {
+        "types.FormularioDados": {
             "type": "object",
             "properties": {
+                "atuacao": {
+                    "type": "string"
+                },
+                "cidade": {
+                    "type": "string"
+                },
                 "email": {
                     "type": "string"
                 },
-                "mensagem": {
+                "empresa": {
                     "type": "string"
                 },
                 "name": {
                     "type": "string"
                 },
-                "servico": {
+                "porte": {
+                    "type": "string"
+                },
+                "servicos": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "setor": {
+                    "type": "string"
+                },
+                "telefone": {
                     "type": "string"
                 }
             }

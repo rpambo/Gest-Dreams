@@ -101,3 +101,13 @@ input[type="checkbox"] {
   background-color: #fff;
   color: #000 !important;
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slide{
+    top: 50% !important;
+  }
+  .button{
+    top: 93% !important;
+  }
+}

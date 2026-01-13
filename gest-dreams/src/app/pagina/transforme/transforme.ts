@@ -43,7 +43,7 @@ export class Transforme {
   constructor(private fb: FormBuilder, private sev : FormularioService) {
     this.formulario = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100),Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
-      email: ['', [Validators.required,Validators.minLength(2), Validators.maxLength(100) ,Validators.email]],
+      email: ['', [Validators.required,Validators.minLength(2),Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),Validators.maxLength(100) ,Validators.email]],
       telefone: ['', [Validators.required, Validators.pattern('^[0-9+\\-\\s()]+$')]],
       empresa: ['', [Validators.required,Validators.minLength(2), Validators.maxLength(100) ,Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
       cidade: ['', [Validators.required,Validators.minLength(2), Validators.maxLength(50) ,Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$')]],
@@ -419,6 +419,7 @@ handleKeyboard(event: KeyboardEvent): void {
       this.servicoArray.clear();
       this.passoAtual = 0;
       this.mostarItem = false;
+      
     },
     error: (error: any) => {
       Swal.fire({
