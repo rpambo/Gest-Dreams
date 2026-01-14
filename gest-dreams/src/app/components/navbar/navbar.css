@@ -1,3 +1,4 @@
+
 a{
     font-family: 'Urbanist';
     font-weight: 700;
@@ -24,6 +25,42 @@ ul li a{
   color: #fa8072 !important;
 }
 
+/* === NAVBAR DESKTOP - ITEM PRINCIPAL ATIVO === */
+.uk-navbar-nav > li.uk-active > a {
+    color: #fa8072 !important;
+    position: relative;
+}
+
+/* Linha inferior para o item ativo */
+.uk-navbar-nav > li.uk-active > a::after {
+    content: '';
+    position: absolute;
+    bottom: 25px; /* Ajuste conforme necessário */
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: #fa8072;
+}
+
+/* === OFFCANVAS MOBILE - ITEM ATIVO === */
+.uk-offcanvas-bar .uk-nav-primary > li.uk-active > a {
+    color: #fa8072 !important;
+    background-color: rgba(250, 128, 114, 0.1) !important;
+    border-left: 3px solid #fa8072 !important;
+    padding-left: 15px !important;
+}
+
+/* Submenu ativo no offcanvas */
+.uk-offcanvas-bar .uk-nav-sub > li.uk-active > a {
+    color: #fa8072 !important;
+    font-weight: 600 !important;
+}
+
+/* Ícone do parent ativo */
+.uk-offcanvas-bar .uk-parent.uk-active > a > [uk-nav-parent-icon] {
+    color: #fa8072 !important;
+}
+
 .uk-drop-grid {
   position: relative; /* precisa para o pseudo-elemento */
 }
@@ -46,6 +83,9 @@ ul li a:hover{
     border: 1px solid #dbdbdb !important;
     color: #8e459b;
     background-color: #fff;
+}
+.uk-button{
+  padding: 0 10px !important;
 }
 
 .uk-navbar-container {
@@ -74,6 +114,10 @@ ul li a:hover{
   color: #272727;
 }
 
+.navbar-scrolled .uk-navbar-toggle > .uk-icon{
+  color: #272727 !important;
+}
+
 .navbar-scrolled .uk-navbar-nav > li > a:hover {
   color: #8e459b;
 }
@@ -95,13 +139,18 @@ p{
 @media (min-width: 768px) and (max-width: 1024px){
    .botao-left{
     font-size: .6rem !important;
-    padding: 0 7px;
    }
    ul li a{
-    font-size: .7rem !important;
+    font-size: .6rem !important;
    }
    .uk-logo{
     width: 120px !important;
+   }
+   h1{
+    font-size: 1.2rem !important;
+   }
+   p{
+    font-size: .8rem !important;
    }
 }
 

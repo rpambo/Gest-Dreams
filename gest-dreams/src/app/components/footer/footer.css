@@ -36,6 +36,26 @@ ul li a{
 
 hr{
     border:  1px solid #ffffff45;
+    margin: 0;
+}
+
+.uk-button:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.icon .uk-icon:hover{
+    color: #fa7280 !important;
+}
+
+@media (min-width: 344px) and (max-width: 768px) {
+    .text{
+        max-width: 250px;
+    }
+    .icon{
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

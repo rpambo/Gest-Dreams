@@ -97,9 +97,43 @@ input[type="checkbox"] {
   border-radius: 5px;  
 }
 
-.opcao-botao:has(input:checked){
+.opcao-botao-mobile{
+  background-color: transparent;
+  cursor: pointer;
+  font-size: .9rem !important;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.opcao-botao:has(input:checked), .opcao-botao-mobile:has(input:checked){
   background-color: #fff;
   color: #000 !important;
+}
+
+@media (max-width: 1024px){
+  .slide{
+    top: 40% !important;
+  }
+  .button{
+    top: 93% !important;
+  }
+  .button{
+    top: 95% !important;
+  }
+}
+
+@media (min-width: 344px) and (max-width: 768px){
+ label{
+  font-size: 1.2rem !important;
+ }
+ .slide-mobile{
+  top: 30% !important;
+ }
+ .button{
+    top: 91% !important;
+  } 
 }
 
 

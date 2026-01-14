@@ -66,6 +66,17 @@
   }
 }
 
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (min-width: 344px) and (max-width: 767px) {
   .text-space{
     font-size: 1.5rem;

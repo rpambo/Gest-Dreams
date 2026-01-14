@@ -37,6 +37,17 @@ p{
   transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .reveal-active.text-servico {
   opacity: 1;
   transform: translateY(0);

@@ -1,0 +1,99 @@
+.title{
+     font-family: "Space Grotesk", sans-serif; 
+    color: #272727; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.uk-icon-button {
+  background-color: #fa8072;
+  color: #f5f5dc;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.text-inicial{
+    font-family: "Urbanist";
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.uk-overlay-primary{
+    background-color: #0000003c;
+}
+
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* estilo dos botões */
+.uk-icon-button {
+  background-color: #fa8072;
+  color: #f5f5dc;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.uk-button {
+    background-color: #008080;
+    color: #f5f5dc; 
+    border-radius: 10px;
+    font-family: "Urbanist";
+    text-transform: lowercase;
+    font-size: 1rem;
+    padding: 5px 25px;
+    font-weight: 500;
+}
+
+.uk-button::first-letter{
+    text-transform: uppercase;
+}
+
+.uk-overlay-default{
+    background-color: #0000002d;
+    border-radius: 10px;
+}
+
+hr{
+    border: 1px solid  #00000030;
+}
+
+.uk-icon-button:hover{
+    background-color: transparent !important;
+    border: 2px solid #fa8072;
+    color: #fa8072 !important;
+}
+
+.uk-button:hover{
+  background-color: transparent;
+  border: 1px solid #008080;
+  color: #008080;
+}
+
+@media (min-width:344px) and (max-width:767px)  {
+    .uk-background-cover{
+        height: 50vh !important;
+    }
+    .text-inicial{
+        text-align: center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px)  {
+    .uk-background-cover{
+        height: 30vh !important;
+    }
+}

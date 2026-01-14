@@ -8,35 +8,49 @@
 
 .text-resid{
   font-family: "Space Grotesk", sans-serif; 
-    color: #272727; 
-    font-size: 1rem; 
+  color: #272727; 
+  font-size: .9rem; 
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .text{
-    font-size: 2.5rem;
+    font-size: 1.5rem !important;
     font-family: "Urbanist";
-    font-weight: bold;
+    font-weight: 400;
     color: #272727;
-}
-.text-junta{
-    font-size: 4.9rem;
-    font-family: "Urbanist";
-    font-weight: bold;
-    color: #fa8072;
+    text-align: center;
 }
 
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end; /* alinha todos à direita */
-  gap: 25px; /* espaço entre ícones */
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.social-item.youtube {
-  flex-basis: 100%; /* força ir para a linha de baixo */
-  display: flex;
-  justify-content: flex-end; /* ainda à direita */
-  margin-top: 5px; /* opcional, separação da linha acima */
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card1.reveal-fade{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card1{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.uk-input, .uk-textarea{
+    border-radius: 5px;
+    font-family: 'Urbanist';
+    background-color: #F1F6FB;
+    border: 1px solid #008080;
 }
 
 /* estilo dos botões */
@@ -85,28 +99,6 @@ hr{
   color: #008080;
 }
 
-.card1.reveal-fade{
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-.reveal-active.card1{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card.reveal-fade{
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-.reveal-active.card{
-  opacity: 1;
-  transform: translateX(0);
-}
-
 @media (min-width:344px) and (max-width:767px)  {
     .uk-card{
       margin-bottom: 10px;
@@ -135,6 +127,9 @@ hr{
   .button{
     width: 70%;
   }
+  .text{
+    font-size: 1rem !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -149,5 +144,9 @@ hr{
   }
   .uk-button{
     font-size: .9rem !important;
+  }
+  .text{
+    font-size: 1.2rem !important;
+    text-align: left;
   }
 }

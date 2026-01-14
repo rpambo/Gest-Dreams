@@ -6,6 +6,7 @@ import { Programa } from './pagina/programa/programa';
 import { Transforme } from './pagina/transforme/transforme';
 import { PoliticaCockiees } from './pagina/politica-cockiees/politica-cockiees';
 import { TermoDeUso } from './pagina/termo-de-uso/termo-de-uso';
+import { Reclamacao } from './pagina/reclamacao/reclamacao';
 
 export const routes: Routes = [
     {path:'', component:Home},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path:'programas', component: Programa},
     {path:'perfil-empresa', component: Transforme},
     {path:'politica-de-privacidade-e-cookies', component: PoliticaCockiees},
-    {path:'termo-de-uso', component: TermoDeUso}
+    {path:'termo-de-uso', component: TermoDeUso},
+    {path:'canal-de-reclamacao', component: Reclamacao}
 ];

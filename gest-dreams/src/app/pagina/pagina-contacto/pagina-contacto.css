@@ -9,6 +9,17 @@
     background-color: #0000003c;
 }
 
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (min-width:344px) and (max-width:767px)  {
     .uk-background-cover{
         height: 50vh !important;

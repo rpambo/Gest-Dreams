@@ -1,6 +1,6 @@
-<div class="uk-section uk-padding-remove-bottom" style="background-color: rgb(0, 0, 68);">
+<div class="uk-section uk-padding-remove-bottom" style="background-color: rgb(0, 0, 68); padding-top: 30px;">
     <div class="uk-container">
-        <div class="uk-child-width-1-4@l uk-child-width-1-3@s uk-child-width-1-4@m uk-grid uk-margin-large-bottom">
+        <div class="uk-child-width-1-4@l uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
             <div>
                 <div>
                     <img width="180" src="imagens/upload/logo/logo-gestdreams.svg" alt="">
@@ -8,11 +8,10 @@
                     <ul class="uk-list"> 
                     </ul>
                     
-                    <div class="uk-flex uk-flex-middle">
-                        <span uk-icon="icon: facebook" style="color: white;" class="uk-margin-medium-right"></span>
-                        <span uk-icon="icon: instagram" style="color: white;" class="uk-margin-medium-right"></span>
-                        <span uk-icon="icon: linkedin" style="color: white;" class="uk-margin-medium-right"></span>
-                        <span uk-icon="icon: youtube" style="color: white;"></span>
+                    <div class="uk-flex uk-flex-middle icon">
+                        <a href=""><span uk-icon="icon: facebook" style="color: white;" class="uk-margin-medium-right"></span></a>
+                        <a href=""><span uk-icon="icon: instagram" style="color: white;" class="uk-margin-medium-right"></span></a>
+                        <a href=""><span uk-icon="icon: linkedin" style="color: white;" class="uk-margin-medium-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -21,10 +20,10 @@
                     <h3>Corporativo</h3>
                     <ul class="uk-list">
                         <li><a [routerLink]="['/sobre-gestdreams']">Sobre a GestDreams</a></li>
-                        <li><a href="">Programas</a></li>
+                        <li><a [routerLink]="['/programas']" >Programas</a></li>
                         <li><a href="">Política SG</a></li>
                         <hr>
-                        <a href="" class="uk-button uk-button-default">Transforme a sua empresa</a>
+                        <a [routerLink]="['/perfil-empresa']" class="uk-button uk-button-default">Transforme a sua empresa</a>
                     </ul>
                 </div>
             </div>
@@ -35,7 +34,7 @@
                         <li><a href="">Onda branca</a></li>
                     </ul>
                     <ul class="uk-list">
-                        <li><a href="">Bernardino Antonio</a></li>
+                        <li><a href="">Bernardino António</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                     <h3>Contactos</h3>
                     <ul class="uk-list">
                         <li><a href="" class="uk-flex uk-flex-middle"><span uk-icon="icon: location; ratio: 2.5" class="uk-margin-small-right"></span> Luanda na rua Comandante Gika, Nº62 ( adjacente ao Hotel Alvalade)</a></li>
-                        <li><a href="" class="uk-flex uk-flex-middle"><span uk-icon="icon: receiver" class="uk-margin-small-right"></span> (244) 922 222 222</a></li>
+                        <li><a href="" class="uk-flex uk-flex-middle"><span uk-icon="icon: receiver" class="uk-margin-small-right"></span> (+244) 922 222 222</a></li>
                         <li><a href="" class="uk-flex uk-flex-middle"><span uk-icon="icon: mail" class="uk-margin-small-right"></span> geral@gestdreams.com</a></li>
                     </ul>
                 </div>
@@ -62,7 +61,7 @@
                 <a class="text-cpy" [routerLink]="['/termo-de-uso']" >Termos de uso</a>
             </div>
             <div>
-                <a class="text-cpy" [routerLink]="['/termo-de-uso']" >Canal de reclamacoes</a>
+                <a class="text-cpy" [routerLink]="['/canal-de-reclamacao']" >Canal de reclamação</a>
             </div>
         </div>
     </div>

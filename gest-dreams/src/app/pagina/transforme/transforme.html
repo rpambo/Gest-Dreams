@@ -1,4 +1,4 @@
-<div style="background:#000; overflow:hidden;" class="uk-flex uk-flex-center">
+<div style="background:#000; overflow:hidden;" class="uk-flex uk-flex-center back">
 
   <div style="width:90%;">
     <div class="uk-child-width-1-1@l uk-grid">
@@ -321,7 +321,7 @@
           </div>
 
           <!-- PASSO 8 -->
-          <div class="slide uk-position-center-left"
+          <div class="slide uk-position-center-left slide-mobile"
                style="top:10%;"
                [class.ativo]="passoAtual === 8">
 
@@ -335,8 +335,29 @@
             </label>
 
             <p style="color:white;">Pode marcar mais de uma opção, se quiser</p>
-
-            <div class="uk-flex uk-flex-middle uk-flex-center" 
+            <div class="uk-flex uk-flex-column uk-hidden@s">
+              <label class="opcao-botao-mobile">
+                <input type="checkbox" 
+                       (change)="toggleServico('imagens/upload/programas/programa-1.png', $event)">
+                       Programa de saude mental do trabalhador
+              </label>
+              <label class="opcao-botao-mobile uk-margin-small-top">
+                <input type="checkbox" 
+                       (change)="toggleServico('imagens/upload/programas/programa-2.png', $event)">
+                       Mentoria de saude mental para gestores
+              </label>
+              <label class="opcao-botao-mobile uk-margin-small-top">
+                <input type="checkbox" 
+                       (change)="toggleServico('imagens/upload/programas/programa-3.png', $event)">
+                       Atendimento a empresa
+              </label>
+              <label class="opcao-botao-mobile uk-margin-small-top">
+                <input type="checkbox" 
+                       (change)="toggleServico('imagens/upload/programas/programa-4.png', $event)">
+                       Gestao de programa de saude mental para empresa
+              </label>
+            </div>
+            <div class="uk-visible@s uk-flex uk-flex-middle uk-flex-center" 
                  [ngStyle]="{'border': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '4px solid #f0506e' : 'none', 'padding': servicoArray.invalid && (servicoArray.dirty || servicoArray.touched) ? '8px' : '0'}">
               <label class="opcao-botao">
                 <input type="checkbox" 

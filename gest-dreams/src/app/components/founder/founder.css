@@ -47,6 +47,36 @@ p{
     color: #fff;
 }
 
+.icon:hover{
+  background-color: #008080;
+}
+.icon:hover .uk-icon{
+  color: white !important;
+}
+
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card1.reveal-fade{
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card1{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px){
   .text-servico{
     font-size: 2rem !important;

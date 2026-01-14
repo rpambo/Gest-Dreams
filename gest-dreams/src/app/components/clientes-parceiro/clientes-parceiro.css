@@ -32,13 +32,23 @@
     margin-bottom: 25px;
 }
 
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media (min-width: 344px) and (max-width: 767px){
   .text-servico{
     font-size: 1.5rem !important;
   }
   img{
-    width: 45%;
+    width: 55%;
     margin: auto;
   }
 }

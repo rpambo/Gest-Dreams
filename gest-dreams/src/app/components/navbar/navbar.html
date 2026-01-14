@@ -22,7 +22,7 @@
       <div class="uk-navbar-center uk-visible@s">
         <ul class="uk-navbar-nav">
           <!-- Institucional Dropdown -->
-          <li>
+          <li routerLinkActive="uk-active">
             <a href="javascript:void(0)">Institucional</a>
             <div class="uk-navbar-dropdown back uk-padding-large custom-dropdown uk-navbar-dropdown-width-1-1"
                  uk-dropdown="mode: click, hover; delay-show: 200; delay-hide: 200; stretch: x"
@@ -78,12 +78,12 @@
           </li>
 
           <!-- Programas -->
-          <li>
+          <li routerLinkActive="uk-active">
             <a [routerLink]="['/programas']">Programas</a>
           </li>
 
           <!-- Política SG -->
-          <li>
+          <li routerLinkActive="uk-active">
             <a uk-scroll href="#inovacao">Política SG</a>
           </li>
 
@@ -123,7 +123,7 @@
           </li>
 
           <!-- Contacto -->
-          <li>
+          <li routerLinkActive="uk-active">
             <a [routerLink]="['/contacto']">Contacto</a>
           </li>
         </ul>
@@ -149,4 +149,118 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<!-- Off-canvas menu para mobile -->
+<div id="offcanvas-nav" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column" style="background-color: #00224b; color: white;">
+        <!-- Cabeçalho com logo e botão fechar -->
+        <div class="uk-flex uk-flex-between uk-flex-middle uk-padding-small uk-border-bottom">
+            <a class="uk-logo" href="#" aria-label="Back to Home">
+                <img 
+                    src="imagens/upload/logo/logo-gestdreams.svg" 
+                    width="140" 
+                    alt="GestDreams Logo"
+                    loading="lazy"
+                >
+            </a>
+            <button class="uk-offcanvas-close" type="button" uk-close style="color: white;"></button>
+        </div>
+
+        <!-- Navegação principal -->
+        <div class="uk-flex-auto">
+            <ul class="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical" style="font-family: 'Urbanist';">
+                <!-- Institucional com submenu -->
+                <li class="uk-parent " routerLinkActive="uk-active">
+                    <a href="javascript:void(0)" class="uk-text-left" style="color: white; font-size: 1.1rem;">
+                        Institucional
+                        <span class="uk-float-right" uk-nav-parent-icon></span>
+                    </a>
+                    <ul class="uk-nav-sub uk-padding-small uk-padding-remove-vertical">
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/sobre-gestdreams']" style="color: rgba(255,255,255,0.8);">
+                                Sobre a GestDreams
+                            </a>
+                        </li>
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/sobre-gestdreams']" fragment="missao" style="color: rgba(255,255,255,0.8);">
+                                Missão
+                            </a>
+                        </li>
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/sobre-gestdreams']" fragment="visao" style="color: rgba(255,255,255,0.8);">
+                                Visão
+                            </a>
+                        </li>
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/sobre-gestdreams']" fragment="valores" style="color: rgba(255,255,255,0.8);">
+                                Valores
+                            </a>
+                        </li>
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/sobre-gestdreams']" fragment="lideranca" style="color: rgba(255,255,255,0.8);">
+                                Liderança
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Programas -->
+                <li routerLinkActive="uk-active">
+                    <a [routerLink]="['/programas']" class="uk-text-left" style="color: white; font-size: 1.1rem;">
+                        Programas
+                    </a>
+                </li>
+
+                <!-- Política SG -->
+                <li routerLinkActive="uk-active">
+                    <a uk-scroll href="#inovacao" class="uk-text-left" style="color: white; font-size: 1.1rem;">
+                        Política SG
+                    </a>
+                </li>
+
+                <!-- Iniciativas com submenu -->
+                <li class="uk-parent" routerLinkActive="uk-active">
+                    <a href="javascript:void(0)" class="uk-text-left" style="color: white; font-size: 1.1rem;">
+                        Iniciativas
+                        <span class="uk-float-right" uk-nav-parent-icon></span>
+                    </a>
+                    <ul class="uk-nav-sub uk-padding-small uk-padding-remove-vertical">
+                        <li routerLinkActive="uk-active">
+                            <a [routerLink]="['/mentoria-de-saude-mental-para-gestores']" style="color: rgba(255,255,255,0.8);">
+                                Onda Branca
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Contacto -->
+                <li routerLinkActive="uk-active">
+                    <a [routerLink]="['/contacto']" class="uk-text-left" style="color: white; font-size: 1.1rem;">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <div class="uk-flex">
+              <div class="uk-margin-right">
+                <a href=""><span uk-icon="icon: facebook"></span></a>
+              </div>
+              <div class="uk-margin-right">
+                <a href=""><span uk-icon="icon: instagram"></span></a>
+              </div>
+              <div>
+                <a href=""><span uk-icon="icon: linkedin"></span></a>
+              </div>
+            </div>
+        </div>
+        <!-- Rodapé com CTA -->
+        <div class="uk-padding uk-text-center uk-border-top">
+            <a [routerLink]="['/perfil-empresa']" 
+               class="uk-button uk-button-default" 
+               style="background-color: white; color: #00224b; border-radius: 5px; width: 100%; font-size: .6rem;">
+                Transforme sua Empresa
+            </a>
+        </div>
+    </div>
 </div>
